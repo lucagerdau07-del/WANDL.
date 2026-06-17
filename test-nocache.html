@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WANDL. | Die 2-in-1 Mahlzeit</title>
+    <meta name="description" content="WANDL. ist der 2-in-1 Riegel für dein Abenteuer. Kalt als Snack, warm mit heißem Wasser als Porridge. Vegan, allergenfrei, 20g Protein. Handgemacht in Hamburg.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+<!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/scroll-video.js" defer></script>
+</head>
+<body>
+
+    <!-- Floating Background -->
+    <div class="bg-symbols" aria-hidden="true">
+        <span class="plus" style="--x: 10%; --duration: 18s; --delay: 0s; --size: 1.2">+</span>
+        <span class="plus" style="--x: 25%; --duration: 22s; --delay: 3s; --size: 0.8">+</span>
+        <span class="plus" style="--x: 40%; --duration: 16s; --delay: 7s; --size: 1.5">+</span>
+        <span class="plus" style="--x: 55%; --duration: 20s; --delay: 2s; --size: 1.0">+</span>
+        <span class="plus" style="--x: 70%; --duration: 24s; --delay: 5s; --size: 1.3">+</span>
+        <span class="plus" style="--x: 85%; --duration: 19s; --delay: 8s; --size: 0.9">+</span>
+        <span class="plus" style="--x: 15%; --duration: 21s; --delay: 10s; --size: 1.1">+</span>
+        <span class="plus" style="--x: 50%; --duration: 17s; --delay: 4s; --size: 0.7">+</span>
+        <span class="plus" style="--x: 65%; --duration: 23s; --delay: 6s; --size: 1.4">+</span>
+        <span class="plus" style="--x: 90%; --duration: 15s; --delay: 1s; --size: 1.0">+</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="nav-main">
+        <div class="nav-container">
+            <a href="#hero" class="logo"><img src="assets/images/logo-v4.png" alt="WANDL. Logo" style="height: 40px; display: block;"></a>
+            <ul class="nav-links">
+                <li><a href="#how-it-works">Idee</a></li>
+                <li><a href="#usp">Unser Riegel</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="abos.html">Abos</a></li>
+            </ul>
+            <a href="shop.html" class="btn-primary nav-cta">Zum Shop</a>
+            <button type="button" class="hamburger" aria-label="Menü öffnen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ============================================================
+             HERO
+             ============================================================ -->
+        <section id="sv-section" class="sv-section">
+            <div class="sv-sticky">
+                <canvas id="sv-canvas" class="sv-canvas"></canvas>
+                <div class="sv-overlay"></div>
+                
+                <!-- Overlay Texts (like Standalone) -->
+                <div class="sv-text sv-text-1">
+                    <h1 class="hero-title" style="font-size: clamp(3rem, 8vw, 6rem);">Snack & Mahlzeit.</h1>
+                    <p class="hero-subtitle">1 Riegel. 2 Funktionen.</p>
+                </div>
+                <div class="sv-text sv-text-2">
+                    <h2>350 kcal pure Energie.</h2>
+                    <p>100% kompostierbar. Rein pflanzlich.</p>
+                </div>
+                <div class="sv-text sv-text-3">
+                    <h2>Das Outdoor-Upgrade.</h2>
+                    <a href="shop.html" class="btn btn-primary" style="margin-top: 2rem;">Zum Shop</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             HOW IT WORKS - Transformation (Idee / Funktion)
+             ============================================================ -->
+        <section id="transformation" style="padding: 4rem 0;">
+            <div class="container" style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; justify-content: center; gap: 4rem;">
+                <div class="image-content" style="flex: 1; display: flex; justify-content: center; align-items: center; min-width: 300px;">
+                    <img src="assets/images/design-4-v3.png?v=1781717794" alt="Idee / Funktion" class="floating-image" style="width: 100%; max-width: 600px; height: auto; object-fit: contain; display: block;">
+                </div>
+                <div class="text-content" style="flex: 1; min-width: 300px;">
+                    <h2 style="margin-bottom: 1rem; color: var(--color-olive-700);">Idee / Funktion</h2>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Vom Riegel<br>zur Mahlzeit.</h2>
+                    <div class="steps-grid">
+                        <div class="step-card">
+                            <div class="step-icon">1</div>
+                            <h3>Zerbröseln</h3>
+                            <p>Den Riegel grob in eine Schale oder Tasse brechen.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-icon">2</div>
+                            <h3>Aufgießen</h3>
+                            <p>Mit kochendem Wasser übergießen, bis die Stückchen bedeckt sind.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-icon">3</div>
+                            <h3>Genießen</h3>
+                            <p>90 Sekunden quellen lassen und umrühren – fertig ist das Porridge.</p>
+                        </div>
+                    </div>
+                    <div class="cold-notice" style="margin-top: 2rem; background: var(--color-earth-100); padding: 1.5rem; border-radius: var(--radius-md);">
+                        <p><strong>Das Kalt-Prinzip:</strong> Keine Zeit? Gieße kaltes Wasser auf für ein erfrischendes Kalt-Porridge – oder genieße den Riegel direkt auf der Hand.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ============================================================
+             USP - GRID
+             ============================================================ -->
+        <section id="usp" style="padding: 6rem 0;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <span style="display: inline-block; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 3px; color: var(--color-olive-500); font-weight: 700; margin-bottom: 1rem;">Was uns ausmacht</span>
+                    <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1.5rem;">Kompromisslose Nahrung</h2>
+                    <div style="width: 80px; height: 4px; background: linear-gradient(90deg, var(--color-olive-500), var(--color-earth-400)); margin: 0 auto 1.5rem;"></div>
+                    <p class="section-sub" style="font-size: 1.25rem; max-width: 600px; margin: 0 auto;">Echte Zutaten, echte Leistung. Ohne den üblichen Magen-Stress.</p>
+                </div>
+                <div class="usp-grid">
+                    <div class="usp-item">
+                        <span class="usp-icon">🌾</span>
+                        <h3>Porridge to go</h3>
+                        <p>Aus den besten Zutaten eines Porridges. 100% löffelbare Konsistenz nach 90s in heißem Wasser.</p>
+                    </div>
+                    <div class="usp-item">
+                        <span class="usp-icon">💪</span>
+                        <h3>20 % Protein</h3>
+                        <p>Volle Power durch natürliche Proteinquellen (Hanf- und Kürbiskernprotein) ohne künstliche Pulverzusätze.</p>
+                    </div>
+                    <div class="usp-item">
+                        <span class="usp-icon">🌱</span>
+                        <h3>Allergenfrei</h3>
+                        <p>0 % Erdnuss, Soja, Milch, Mandeln – glutenfreie Haferbasis. Sicher für jeden Magen.</p>
+                    </div>
+                    <div class="need-card">
+                        <p class="need-text">Der Notgroschen für den Rucksack. Egal ob auf dem Trail, im Büro oder auf Reisen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             ZIELGRUPPE
+             ============================================================ -->
+        <section id="target-audience">
+            <div class="container">
+                <h2 class="center-text">Unsere Zielgruppe</h2>
+                <p class="center-text section-sub" style="margin-bottom: 3rem;">Welche Bedürfnisse haben diese Personen?</p>
+                <div class="target-vertical-grid" id="target-anim-container">
+                    
+                    <div class="target-bar anim-target">
+                        <div class="target-placeholder">🏔️</div>
+                        <div class="target-info">
+                            <h3>Outdoor-Enthusiasten</h3>
+                            <p>Weitwanderer, Trekker, Bushcrafter und Camper suchen extrem leichte, nährstoffdichte Nahrung. <strong>Der Fokus:</strong> Wegfall von Gaskocher, Topf und schwerem Brennstoff.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="target-bar anim-target">
+                        <div class="target-placeholder">💼</div>
+                        <div class="target-info">
+                            <h3>Performers & Professionals</h3>
+                            <p>Berufspendler und Studierende im stressigen Alltag brauchen eine schnelle, gesunde Mahlzeit. <strong>Der Fokus:</strong> Zubereitung in Sekunden ohne Mikrowelle – und langanhaltende Energie ohne Mittagstief.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="target-bar anim-target">
+                        <div class="target-placeholder">🧗‍♂️</div>
+                        <div class="target-info">
+                            <h3>Sportler & Alpinisten</h3>
+                            <p>Maximale körperliche Belastung erfordert Regeneration. <strong>Der Fokus:</strong> 20g hochwertiges Protein, komplexe Kohlenhydrate und hundertprozentige Magenverträglichkeit ohne Allergene.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             KONKURRENZANALYSE
+             ============================================================ -->
+        <section id="competition">
+            <div class="container">
+                <h2 class="center-text" style="margin-bottom: 3rem;">Konkurrenzanalyse</h2>
+                <div class="competition-cards">
+                    
+                    <div class="comp-card" style="border-top: 4px solid var(--color-earth-300);">
+                        <div class="comp-header">
+                            <h3>Clif Bar</h3>
+                            <span class="comp-badge">Der Klassiker</span>
+                        </div>
+                        <div class="comp-body">
+                            <div class="comp-pros">
+                                <strong>Stärken:</strong>
+                                <ul>
+                                    <li>Hohe Bekanntheit</li>
+                                    <li>Günstiger Preis (~2,49 €)</li>
+                                </ul>
+                            </div>
+                            <div class="comp-cons">
+                                <strong>Schwächen:</strong>
+                                <ul>
+                                    <li>Nicht allergenfrei (Soja, Nüsse)</li>
+                                    <li>Klebrig bei Kälte</li>
+                                    <li>Viel industrieller Zucker</li>
+                                    <li>Nicht als Porridge nutzbar</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comp-usp">
+                            <strong>WANDL. Vorteil:</strong><br>
+                            100% Allergenfrei & warm essbar.
+                        </div>
+                    </div>
+
+                    <div class="comp-card" style="border-top: 4px solid var(--color-earth-500);">
+                        <div class="comp-header">
+                            <h3>Radix Nutrition</h3>
+                            <span class="comp-badge">Trekking-Nahrung</span>
+                        </div>
+                        <div class="comp-body">
+                            <div class="comp-pros">
+                                <strong>Stärken:</strong>
+                                <ul>
+                                    <li>Hochfunktionell</li>
+                                    <li>Wissenschaftlich optimiert</li>
+                                </ul>
+                            </div>
+                            <div class="comp-cons">
+                                <strong>Schwächen:</strong>
+                                <ul>
+                                    <li>Sehr teuer (6,50 - 8,00 €)</li>
+                                    <li>Nur als Pulver transportierbar</li>
+                                    <li>Nicht direkt als Riegel essbar</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comp-usp">
+                            <strong>WANDL. Vorteil:</strong><br>
+                            Kalt als kompakter Snack unterwegs essbar.
+                        </div>
+                    </div>
+
+                    <div class="comp-card" style="border-top: 4px solid var(--color-earth-300);">
+                        <div class="comp-header">
+                            <h3>Barebells</h3>
+                            <span class="comp-badge">Fitness-Marktführer</span>
+                        </div>
+                        <div class="comp-body">
+                            <div class="comp-pros">
+                                <strong>Stärken:</strong>
+                                <ul>
+                                    <li>Sehr guter Geschmack</li>
+                                    <li>Überall verfügbar</li>
+                                </ul>
+                            </div>
+                            <div class="comp-cons">
+                                <strong>Schwächen:</strong>
+                                <ul>
+                                    <li>Milchprotein (nicht vegan)</li>
+                                    <li>Chemische Süßstoffe</li>
+                                    <li>Kein Outdoor-Fokus</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comp-usp">
+                            <strong>WANDL. Vorteil:</strong><br>
+                            Rein pflanzlich, Clean Label, echte Mahlzeit.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- ============================================================
+             NACHHALTIGKEIT
+             ============================================================ -->
+        <section id="sustainability" style="position: relative; width: 100%; padding: 0; margin: 0; overflow: hidden;">
+            <img src="assets/images/responsibility.png" alt="Unsere Verantwortung" style="width: 100%; height: auto; display: block;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: flex-start; justify-content: center; padding-top: 4rem;">
+                <h2 style="color: white; font-size: clamp(2rem, 5vw, 4rem); text-shadow: 0 4px 20px rgba(0,0,0,0.7); text-align: center;">Unsere Verantwortung</h2>
+            </div>
+        </section>
+        <!-- ============================================================
+             ALLERGEN-FREI - Icon Grid
+             ============================================================ -->
+        <section id="allergen-free" style="background: linear-gradient(135deg, var(--color-earth-900) 0%, var(--color-olive-800) 100%);">
+            <div class="container split-layout">
+                <div class="text-content">
+                    <h2 style="color: white;">0 % Allergen-Falle<br>bei 20 % Proteindichte</h2>
+                    <p class="section-sub" style="color: var(--color-earth-100);">Frei von allen 14 EU-Hauptallergenen (Vegane Linie)</p>
+                    <div class="allergen-grid">
+                        <div class="allergen-icon">
+                            <span class="icon">🥜</span>
+                            <span class="cross-line"></span>
+                            <span class="label">Erdnussfrei</span>
+                        </div>
+                        <div class="allergen-icon">
+                            <span class="icon">🌾</span>
+                            <span class="cross-line"></span>
+                            <span class="label">Glutenfrei</span>
+                        </div>
+                        <div class="allergen-icon">
+                            <span class="icon">🌱</span>
+                            <span class="cross-line"></span>
+                            <span class="label">Sojafrei</span>
+                        </div>
+                        <div class="allergen-icon">
+                            <span class="icon">🥛</span>
+                            <span class="cross-line"></span>
+                            <span class="label">Milchfrei</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-content" style="display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/images/allergen-flat.png" alt="Allergenfrei – Keine Nüsse, Milch, Soja, Gluten" style="border-radius: var(--radius-lg); width: 100%; max-width: 500px; height: auto; display: block; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             PRODUCTION (#production)
+             ============================================================ -->
+        <section id="production" class="fullscreen-image-section">
+            <div class="overlay">
+                <h2>Schonend zubereitet.</h2>
+                <p>Um den Porridge-USP zu erhalten, wird WANDL. <strong>nicht klassisch gebacken</strong>. Die Haferflocken werden trocken vorgeröstet und die Riegel bei <strong>50-60 °C schonend gedörrt</strong>. Das entzieht Feuchtigkeit für eine feste, griffige Außenseite – erhält aber die volle Porridge-Löslichkeit.</p>
+                <div class="production-details">
+                    <div class="detail-item">
+                        <span class="detail-icon">🌡️</span>
+                        <span>50-60 °C Dörrtemperatur</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">💧</span>
+                        <span>aw-Wert unter 0,65 (Wasseraktivität)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             HALTBARKEIT
+             ============================================================ -->
+        <section id="shelf-life">
+            <div class="container">
+                <div class="shelf-life-grid">
+                    <div class="text-content">
+                        <h2>8+ Monate Haltbarkeit.</h2>
+                        <p>Ganz ohne chemische Konservierungsstoffe. Durch schonende Dörrung und einen integrierten Sauerstoffabsorber bleibt WANDL. monatelang frisch – perfekt für lange Expeditionen, Notvorräte oder deine Schreibtischschublade.</p>
+                    </div>
+                    <div class="image-content">
+                        <div class="package-mockup">
+                            <span class="package-icon">📦</span>
+                            <span class="package-label">jonatura Barriere-Beutel</span>
+                            <span class="package-feature">Sauerstoffdicht & Recyclebar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             LEGAL (#legal)
+             ============================================================ -->
+        <section id="legal" class="fullscreen-image-section small">
+            <div class="overlay">
+                <h2>Rechtsform</h2>
+                <div class="legal-box" style="font-size: 1.5rem; font-weight: 600; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+                    <div class="legal-item">
+                        <span class="legal-icon">🏢</span>
+                        <div>
+                            <h4 style="font-size: 2rem; font-weight: 800;">WANDL. GbR</h4>
+                            <p style="font-size: 1.2rem; font-weight: 500;">Gründung erfolgt: 2 volljährige Gesellschafter, bürgerliches Recht.</p>
+                        </div>
+                    </div>
+                    <div class="legal-item">
+                        <span class="legal-icon">🔒</span>
+                        <div>
+                            <h4 style="font-size: 2rem; font-weight: 800;">Markenschutz</h4>
+                            <p style="font-size: 1.2rem; font-weight: 500;">Europäische Wortmarke "WANDL" ist angemeldet (Klassen 29, 30, 32).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             VISION (#vision)
+             ============================================================ -->
+        <section id="vision">
+            <div class="container">
+                <h2 class="center-text" style="color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.8);">Vision & Roadmap</h2>
+                <div class="timeline">
+                    <!-- Phase 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content" style="background: transparent !important; color: white !important; box-shadow: none !important;">
+                            <h3 style="color: white !important; text-shadow: 0 2px 5px rgba(0,0,0,0.8); font-size: 1.8rem;">Phase 1: Proof of Concept</h3>
+                            <span class="timeline-date" style="color: var(--color-earth-200); font-weight: bold; text-shadow: 0 2px 5px rgba(0,0,0,0.8);">Monate 1-6</span>
+                            <p style="text-shadow: 0 2px 5px rgba(0,0,0,0.8); font-size: 1.2rem;">Lokale Produktion in Hamburger Mietküche. Fokus auf E-Commerce (Abo-Modell) und B2B-Pilotprojekte (Cafés, Kletterhallen).</p>
+                        </div>
+                    </div>
+                    <!-- Phase 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content" style="background: transparent !important; color: white !important; box-shadow: none !important;">
+                            <h3 style="color: white !important; text-shadow: 0 2px 5px rgba(0,0,0,0.8); font-size: 1.8rem;">Phase 2: Skalierung</h3>
+                            <span class="timeline-date" style="color: var(--color-earth-200); font-weight: bold; text-shadow: 0 2px 5px rgba(0,0,0,0.8);">Monate 7-18</span>
+                            <p style="text-shadow: 0 2px 5px rgba(0,0,0,0.8); font-size: 1.2rem;">Aufbau eigener Produktionskapazitäten, Automatisierung der Verpackung. Listung im ausgewählten Fachhandel (Outdoor & Sport).</p>
+                        </div>
+                    </div>
+                    <!-- Phase 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content" style="background: transparent !important; color: white !important; box-shadow: none !important;">
+                            <h3 style="color: white !important; text-shadow: 0 2px 5px rgba(0,0,0,0.8); font-size: 1.8rem;">Phase 3: Etablierung</h3>
+                            <span class="timeline-date" style="color: var(--color-earth-200); font-weight: bold; text-shadow: 0 2px 5px rgba(0,0,0,0.8);">Jahr 2-3</span>
+                            <p style="text-shadow: 0 2px 5px rgba(0,0,0,0.8); font-size: 1.2rem;">DACH-weiter Vertrieb über Fachhandel (Globetrotter etc.). Erweiterung des Produktsortiments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             FINANZIERUNG
+             ============================================================ -->
+        <section id="finance">
+            <div class="container">
+                <h2 class="center-text">Finanzierung & Kennzahlen</h2>
+                <div class="finance-grid">
+                    <div class="finance-card">
+                        <div class="finance-icon">💰</div>
+                        <h3>Investitionen (Beginn)</h3>
+                        <p class="finance-value">5.000 €</p>
+                        <p>Für Gewerbeküche-Miete, Erstbestand an Zutaten, Verpackungsmaschine und Markenanmeldung. Finanziert aus Eigenmitteln (Bootstrapping).</p>
+                    </div>
+                    <div class="finance-card">
+                        <div class="finance-icon">🔄</div>
+                        <h3>Laufende Ausgaben</h3>
+                        <p class="finance-value">1,50 € / Riegel</p>
+                        <p>Zutaten, Verpackung, Miete und Marketing. Kalkuliert für die Anfangsphase im Geschäftsbetrieb.</p>
+                    </div>
+                    <div class="finance-card highlight">
+                        <div class="finance-icon">🏷️</div>
+                        <h3>Produktpreis</h3>
+                        <p class="finance-value">4,90 €</p>
+                        <p>UVP im Einzelverkauf. Im Abo vergünstigt bis zu 22% (ab 3,82 €).</p>
+                    </div>
+                    <div class="finance-card">
+                        <div class="finance-icon">📈</div>
+                        <h3>Umsatz (Jahr 1)</h3>
+                        <p class="finance-value">50.000 €</p>
+                        <p>Konservative Schätzung basierend auf B2B-Vorbestellungen und D2C Online-Launch.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             PARTNER (Laufband)
+             ============================================================ -->
+        <div style="height: 100px; background: linear-gradient(to bottom, var(--color-earth-50), #ffffff); width: 100%;"></div>
+<section id="partners" style="overflow: hidden; padding: 3rem 0; background: #ffffff;">
+            <div class="container center-text">
+                <h2 style="margin-bottom: 2rem;">Unsere Partner</h2>
+            </div>
+            
+            <!-- Infinite Marquee -->
+            <div class="logo-carousel">
+                <div class="logo-track">
+                    <div class="logo-item">📦 jonatura</div>
+                    <div class="logo-item">🍳 Kitchen Town</div>
+                    <div class="logo-item">🏕️ Globetrotter</div>
+                    <div class="logo-item">🛒 Bio-Markt</div>
+                    <div class="logo-item">📦 jonatura</div>
+                    <div class="logo-item">🍳 Kitchen Town</div>
+                    <div class="logo-item">🏕️ Globetrotter</div>
+                    <div class="logo-item">🛒 Bio-Markt</div>
+                    <div class="logo-item">📦 jonatura</div>
+                    <div class="logo-item">🍳 Kitchen Town</div>
+                </div>
+            </div>
+        </section>
+        <div style="height: 100px; background: linear-gradient(to bottom, #ffffff, var(--color-earth-50)); width: 100%;"></div>
+        <!-- ============================================================
+             FAQ - Akkordeon
+             ============================================================ -->
+        <section id="faq">
+            <div class="container">
+                <h2 class="center-text">Häufige Fragen</h2>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button type="button" class="accordion-header">
+                            Warum ist WANDL. teurer als normale Riegel?
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>WANDL. ist kein Snack, sondern eine vollwertige, schonend gedörrte Mahlzeit aus 100% natürlichen, allergiefreien Premium-Zutaten. Die aufwendige Herstellung garantiert die 2-in-1 Funktion.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button type="button" class="accordion-header">
+                            Wie funktioniert das Porridge wirklich?
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Da wir die Haferflocken vorrösten und schonend dörren, bleiben sie strukturell intakt, können aber heißes Wasser sofort aufnehmen. In 90 Sekunden entsteht ein perfektes Porridge.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button type="button" class="accordion-header">
+                            Ist die Verpackung umweltfreundlich?
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Ja! Wir nutzen spezielle Monomaterial-Barrierebeutel von jonatura, die hervorragend recycelbar sind und dennoch den Sauerstoff fernhalten.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="brand">
+                    <h3><img src="assets/images/logo-v2.png?v=1781717446" alt="WANDL. Logo" style="height: 30px; filter: brightness(0) invert(1);"></h3>
+                    <p>Das Wesentliche für dein Abenteuer.</p>
+                    <p class="footer-tagline">2-in-1 Premium Energieriegel · Handgemacht in Hamburg</p>
+                </div>
+                <div class="links">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="impressum.html">Impressum & Quellen</a></li>
+                        <li><a href="#">Datenschutz</a></li>
+                        <li><a href="#">AGB</a></li>
+                        <li><a href="#">Versandinformationen</a></li>
+                    </ul>
+                </div>
+                <div class="social">
+                    <h4>Folge uns</h4>
+                    <ul>
+                        <li><a href="#">📱 TikTok</a></li>
+                        <li><a href="#">📸 Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-bar">
+                <p>&copy; 2026 WANDL. GbR, Hamburg. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WANDL. | Produkt Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        main {
+            padding-top: 120px;
+            min-height: 80vh;
+        }
+        
+        .product-detail-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .product-gallery img {
+            width: 100%;
+            border-radius: var(--radius-md);
+        }
+
+        .product-info-full h1 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--color-earth-900);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--color-olive-700);
+            margin-bottom: 1.5rem;
+        }
+
+        .product-description {
+            font-size: 1.1rem;
+            color: var(--color-earth-600);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .add-to-cart-box {
+            background: var(--color-earth-50);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 2rem;
+        }
+
+        .qty-input {
+            width: 80px;
+            height: 50px;
+            border: 1px solid var(--color-earth-200);
+            border-radius: var(--radius-sm);
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--color-earth-800);
+            margin-right: 1rem;
+        }
+
+        .btn-add-to-cart {
+            height: 50px;
+            padding: 0 2rem;
+            background: var(--color-olive-500);
+            color: white;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background var(--transition-fast), transform var(--transition-fast);
+        }
+
+        .btn-add-to-cart:hover {
+            background: var(--color-olive-700);
+            transform: translateY(-2px);
+        }
+
+        .nutrition-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+        
+        .nutrition-table th, .nutrition-table td {
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--color-earth-100);
+            text-align: left;
+        }
+        
+        .nutrition-table th {
+            color: var(--color-earth-800);
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .product-detail-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="nav-main">
+        <div class="nav-container">
+            <a href="index.html#hero" class="logo"><img src="assets/images/logo.png" alt="WANDL. Logo"></a>
+            <ul class="nav-links">
+                <li><a href="index.html#how-it-works">So funktioniert's</a></li>
+                <li><a href="index.html#usp">Unser Riegel</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="abos.html">Abos</a></li>
+                
+            </ul>
+            <a href="abos.html" class="btn-secondary nav-cta" style="margin-right: 1rem;">Zu den Abos</a>
+            <a href="#" class="btn-primary nav-cta">🛒 Warenkorb (0)</a>
+            <button type="button" class="hamburger" aria-label="Menü öffnen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="container">
+            <div class="product-detail-container">
+                <div class="product-gallery">
+                    <img src="assets/images/product-original.png" alt="Produkt" style="width: 100%; height: auto; border-radius: 10px; object-fit: cover; aspect-ratio: 1/1;">
+                </div>
+                
+                <div class="product-info-full">
+                    <div style="color: var(--color-earth-400); font-weight: 600; margin-bottom: 0.5rem;">WANDL. Riegel</div>
+                    <h1>WANDL. Original</h1>
+                    <div class="product-price">4,90 €</div>
+                    
+                    <p class="product-description">Die perfekte Balance aus nahrhaftem Bio-Hafer, cremigem Sonnenblumenkernmus und fruchtigen Waldheidelbeeren. Verfeinert mit Kürbiskernen und Meersalz.</p>
+                    
+                    <div class="add-to-cart-box">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <input type="number" class="qty-input" value="1" min="1" max="99">
+                            <button class="btn-add-to-cart">In den Warenkorb</button>
+                        </div>
+                        <p style="font-size: 0.9rem; color: var(--color-earth-500);">Kostenloser Versand ab 50 € Bestellwert.</p>
+                    </div>
+
+                    <h3>Nährwerte (pro 100g)</h3>
+                    <table class="nutrition-table">
+                        <tr>
+                            <th>Energie</th>
+                            <td>410 kcal</td>
+                        </tr>
+                        <tr>
+                            <th>Protein</th>
+                            <td>20 g</td>
+                        </tr>
+                        <tr>
+                            <th>Kohlenhydrate</th>
+                            <td>45 g</td>
+                        </tr>
+                        <tr>
+                            <th>davon Zucker</th>
+                            <td>12 g</td>
+                        </tr>
+                        <tr>
+                            <th>Fett</th>
+                            <td>15 g</td>
+                        </tr>
+                        <tr>
+                            <th>Ballaststoffe</th>
+                            <td>7 g</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="brand">
+                    <h3><img src="assets/images/logo.png" alt="WANDL. Logo" style="height: 30px; filter: brightness(0) invert(1);"></h3>
+                    <p>Das Wesentliche für dein Abenteuer.</p>
+                    <p class="footer-tagline">2-in-1 Premium Energieriegel · Handgemacht in Hamburg</p>
+                </div>
+                <div class="links">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="impressum.html">Impressum & Quellen</a></li>
+                        <li><a href="#">Datenschutz</a></li>
+                        <li><a href="#">AGB</a></li>
+                        <li><a href="#">Versandinformationen</a></li>
+                    </ul>
+                </div>
+                <div class="social">
+                    <h4>Folge uns</h4>
+                    <ul>
+                        <li><a href="#">📱 TikTok</a></li>
+                        <li><a href="#">📸 Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-bar">
+                <p>&copy; 2026 WANDL. GbR, Hamburg. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

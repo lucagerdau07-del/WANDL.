@@ -4265,6 +4265,10 @@ thead .wandl-col {
     color: var(--color-white);
     text-align: center;
     font-size: 1.1rem;
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* ==========================================================================

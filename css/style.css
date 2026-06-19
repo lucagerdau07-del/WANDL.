@@ -1933,6 +1933,7 @@ section {
     margin: var(--spacing-sm) 0;
     color: var(--color-olive-700);
     letter-spacing: -0.02em;
+    white-space: nowrap;
 }
 
 .price-card p {

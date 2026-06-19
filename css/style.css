@@ -4438,9 +4438,9 @@ thead .wandl-col {
     transform: scale(1.1);
 }
 
-/* Pause animations on hover */
-.orbit-wrapper:hover .orbit-ring,
-.orbit-wrapper:hover .orbit-item-inner {
+/* Pause animations only when hovering directly over an item */
+.orbit-wrapper:has(.orbit-item:hover) .orbit-ring,
+.orbit-wrapper:has(.orbit-item:hover) .orbit-item-inner {
     animation-play-state: paused;
 }
 

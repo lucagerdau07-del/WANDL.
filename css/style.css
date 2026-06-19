@@ -2251,7 +2251,9 @@ section {
    ========================================================================== */
 .btn-primary,
 .btn-secondary {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 0.8rem 2rem;
     border-radius: var(--radius-full);
     font-weight: 600;

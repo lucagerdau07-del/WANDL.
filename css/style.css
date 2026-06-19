@@ -2706,6 +2706,58 @@ img.loaded {
    SUPPLEMENTARY STYLES â€” Additional elements from index.html
    ============================================================================ */
 
+/* ==========================================================================
+   20. COMIC STRIP (#comic-strip)
+   ========================================================================== */
+.comic-strip-container {
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    background-color: var(--color-sand);
+    border: 3px solid var(--color-earth-800);
+    border-radius: var(--radius-lg);
+    box-shadow: 6px 6px 0px rgba(0,0,0,0.1);
+}
+
+.comic-strip-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-earth-900);
+    letter-spacing: 1px;
+}
+
+.comic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.comic-panel {
+    position: relative;
+    border: 2px solid var(--color-earth-800);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+.comic-panel:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+.comic-panel img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Removed multiply blend mode in case images have transparency or need pure colors */
+}
+
 /* â”€â”€ Floating + Background Symbols â”€â”€ */
 .bg-symbols {
     position: fixed;

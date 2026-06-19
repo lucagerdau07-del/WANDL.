@@ -1116,6 +1116,8 @@ section {
     animation: horizontal-scroll 20s linear infinite;
     width: max-content;
     align-items: center;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
 }
 
 .logo-item {
@@ -2311,8 +2313,8 @@ section {
 
 /* Horizontal scroll â€” partner carousel */
 @keyframes horizontal-scroll {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0%   { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
 }
 
 /* Fade in up */

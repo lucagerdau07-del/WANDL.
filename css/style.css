@@ -4200,8 +4200,8 @@ thead .wandl-col {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto 1fr 130px;
     height: 100%;
 }
 .comp-header {

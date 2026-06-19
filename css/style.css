@@ -168,7 +168,7 @@ body::after {
     top: 0;
     left: 0;
     width: 100%;
-    height: 200%;
+    height: calc(100vh + 480px); /* Ensure it covers viewport + max translate distance */
     z-index: var(--z-bg);
     pointer-events: none;
 }
@@ -176,14 +176,13 @@ body::after {
 /* Layer 1 â€” Large, slow '+' symbols */
 body::before {
     background-image:
-        /* Plus 1 */ radial-gradient(circle, transparent 40%, transparent 100%),
         /* Row 1 */
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M11 4h2v7h7v2h-7v7h-2v-7H4v-2h7V4z' fill='%2390a85c' fill-opacity='0.12'/%3E%3C/svg%3E"),
         /* Row 2 â€” offset */
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M9 3h2v6h6v2h-6v6H9v-6H3V9h6V3z' fill='%23788c3e' fill-opacity='0.08'/%3E%3C/svg%3E");
-    background-size: 100% 100%, 120px 120px, 80px 80px;
-    background-position: center, 0 0, 40px 60px;
-    animation: plus-float-1 35s linear infinite;
+    background-size: 120px 120px, 80px 80px;
+    background-position: 0 0, 40px 60px;
+    animation: plus-float-1 12s linear infinite;
 }
 
 /* Layer 2 â€” Smaller, faster '+' symbols */
@@ -193,12 +192,12 @@ body::after {
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M13 4h2v9h9v2h-9v9h-2v-9H4v-2h9V4z' fill='%23a4bc64' fill-opacity='0.06'/%3E%3C/svg%3E");
     background-size: 60px 60px, 160px 160px;
     background-position: 20px 30px, 80px 40px;
-    animation: plus-float-2 25s linear infinite;
+    animation: plus-float-2 18s linear infinite;
 }
 
 @keyframes plus-float-1 {
     0%   { transform: translateY(0); }
-    100% { transform: translateY(-50%); }
+    100% { transform: translateY(-240px); }
 }
 
 @keyframes plus-float-2 {

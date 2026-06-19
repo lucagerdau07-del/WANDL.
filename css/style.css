@@ -4440,7 +4440,8 @@ thead .wandl-col {
 
 /* Pause animations only when hovering directly over an item */
 .orbit-wrapper:has(.orbit-item:hover) .orbit-ring,
-.orbit-wrapper:has(.orbit-item:hover) .orbit-item-inner {
+.orbit-wrapper:has(.orbit-item:hover) .orbit-item-inner,
+.orbit-wrapper:has(.orbit-item:hover) .orbit-text-positioner {
     animation-play-state: paused;
 }
 

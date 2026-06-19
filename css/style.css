@@ -355,7 +355,7 @@ section {
     transition: transform var(--transition-fast);
 }
 .logo:hover img {
-    transform: scale(1.05);
+    transform: scale(1.05); transform-origin: top center;
 }
 
 
@@ -1151,7 +1151,7 @@ section {
 }
 
 .logo-item a:hover img {
-    transform: scale(1.05);
+    transform: scale(1.05); transform-origin: top center;
 }
 
 /* Add dark brown drop shadow to specific logos for better visibility */
@@ -1579,7 +1579,7 @@ section {
 }
 
 .chart-placeholder.pie:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); transform-origin: top center;
 }
 
 /* Donut hole */
@@ -1887,7 +1887,7 @@ section {
 /* Highlighted / Bestseller card */
 .price-card.highlight {
     border: 2px solid var(--color-olive-500);
-    transform: scale(1.05);
+    transform: scale(1.05); transform-origin: top center;
     box-shadow: var(--shadow-xl), var(--shadow-glow-olive);
     background: rgba(255, 255, 255, 0.8);
 }
@@ -3997,7 +3997,7 @@ thead .wandl-col {
 }
 .finance-card.highlight {
     border: 2px solid var(--color-olive-500);
-    transform: scale(1.05);
+    transform: scale(1.05); transform-origin: top center;
 }
 .finance-value {
     font-size: 2.5rem;

@@ -4432,8 +4432,8 @@ thead .wandl-col {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    max-width: 100%;
-    max-height: 100%;
+    max-width: var(--img-size, 100%);
+    max-height: var(--img-size, 100%);
 }
 
 .orbit-item-inner img {
@@ -4507,11 +4507,11 @@ thead .wandl-col {
     color: var(--color-earth-800);
 }
 
-.orbit-item:nth-child(1) { --angle: 0deg; --delay: 0s; }
-.orbit-item:nth-child(2) { --angle: 72deg; --delay: -24s; }
-.orbit-item:nth-child(3) { --angle: 144deg; --delay: -48s; }
-.orbit-item:nth-child(4) { --angle: 216deg; --delay: -72s; }
-.orbit-item:nth-child(5) { --angle: 288deg; --delay: -96s; }
+.orbit-item:nth-child(1) { --angle: 0deg; --delay: 0s; --img-size: 70%; }
+.orbit-item:nth-child(2) { --angle: 72deg; --delay: -24s; --img-size: 100%; }
+.orbit-item:nth-child(3) { --angle: 144deg; --delay: -48s; --img-size: 70%; }
+.orbit-item:nth-child(4) { --angle: 216deg; --delay: -72s; --img-size: 100%; }
+.orbit-item:nth-child(5) { --angle: 288deg; --delay: -96s; --img-size: 100%; }
 
 @keyframes orbit-spin {
     0% { transform: rotate(0deg); }

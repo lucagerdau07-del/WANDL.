@@ -1853,7 +1853,7 @@ section {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
-    align-items: center;
+    align-items: stretch;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -1874,6 +1874,8 @@ section {
     box-shadow: var(--shadow-md);
     position: relative;
     text-align: center;
+    display: flex;
+    flex-direction: column;
     transition:
         transform 0.4s var(--ease-spring),
         box-shadow 0.4s var(--ease-out);
@@ -1882,6 +1884,10 @@ section {
 .price-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-xl);
+}
+
+.price-card button {
+    margin-top: auto !important;
 }
 
 /* Highlighted / Bestseller card */

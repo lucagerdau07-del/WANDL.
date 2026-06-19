@@ -4224,3 +4224,29 @@ thead .wandl-col {
 
 .sv-text-1 { opacity: 1; } /* Starts visible */
 .sv-text.active { pointer-events: auto; }
+
+
+/* Packaging Section Split Background */
+.packaging-section {
+    position: relative;
+    padding: 6rem 0;
+    background: transparent;
+}
+.packaging-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(135deg, var(--color-earth-100) 0%, var(--color-earth-200) 100%);
+    z-index: 0;
+}
+@media (min-width: 768px) {
+    .packaging-section::before {
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+    }
+}

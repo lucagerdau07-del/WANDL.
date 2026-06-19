@@ -4201,7 +4201,7 @@ thead .wandl-col {
     box-shadow: var(--shadow-md);
     overflow: hidden;
     position: relative;
-    padding-bottom: 130px;
+    padding-bottom: 160px;
     height: 100%;
 }
 .comp-header {

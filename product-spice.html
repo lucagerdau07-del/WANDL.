@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1.0.12">
     <style>
         main {
             padding-top: 120px;
@@ -114,21 +114,24 @@
     <!-- Navigation -->
     <nav id="nav-main">
         <div class="nav-container">
-            <a href="index.html#hero" class="logo"><img src="assets/images/logo.png" alt="WANDL. Logo"></a>
+            <a href="index.html#hero" class="logo" style="display: flex; align-items: center; justify-content: flex-start; height: 75px; background: transparent; z-index: 9999;">
+                <img src="assets/images/logo-original.png?v=nocache" alt="WANDL. Logo" style="height: 68px; width: auto; display: block; filter: none !important; opacity: 1 !important; visibility: visible !important; object-fit: contain;">
+            </a>
             <ul class="nav-links">
-                <li><a href="index.html#how-it-works">So funktioniert's</a></li>
+                <li><a href="index.html#how-it-works">Idee</a></li>
                 <li><a href="index.html#usp">Unser Riegel</a></li>
                 <li><a href="shop.html" class="active">Shop</a></li>
                 <li><a href="abos.html">Abos</a></li>
-                
             </ul>
-            <a href="abos.html" class="btn-secondary nav-cta" style="margin-right: 1rem;">Zu den Abos</a>
-            <a href="#" class="btn-primary nav-cta">🛒 Warenkorb (0)</a>
-            <button type="button" class="hamburger" aria-label="Menü öffnen">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-actions" style="display: flex; align-items: center;">
+                <a href="abos.html" class="btn-secondary nav-cta" style="margin-right: 1rem;">Zu den Abos</a>
+                <a href="#" class="btn-primary nav-cta">🛒 Warenkorb (0)</a>
+                <button type="button" class="hamburger" aria-label="Menü öffnen">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 

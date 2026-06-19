@@ -4241,6 +4241,8 @@ thead .wandl-col {
     height: 50%;
     background: linear-gradient(135deg, var(--color-earth-100) 0%, var(--color-earth-200) 100%);
     z-index: 0;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 150px);
+    mask-image: linear-gradient(180deg, transparent 0%, black 150px);
 }
 @media (min-width: 768px) {
     .packaging-section::before {

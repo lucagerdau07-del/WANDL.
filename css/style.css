@@ -1112,12 +1112,18 @@ section {
 
 .logo-track {
     display: flex;
-    gap: var(--spacing-xl);
     animation: horizontal-scroll 20s linear infinite;
     width: max-content;
     align-items: center;
     will-change: transform;
     transform: translate3d(0, 0, 0);
+}
+
+.logo-group {
+    display: flex;
+    gap: var(--spacing-xl);
+    padding-right: var(--spacing-xl); /* Crucial for seamless looping! */
+    align-items: center;
 }
 
 .logo-item {

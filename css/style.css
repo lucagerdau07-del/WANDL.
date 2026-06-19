@@ -4354,7 +4354,7 @@ thead .wandl-col {
 .orbit-wrapper {
     position: relative;
     width: 100%;
-    max-width: 800px;
+    max-width: 1400px;
     aspect-ratio: 1 / 1;
     margin: 0 auto;
     display: flex;
@@ -4370,7 +4370,7 @@ thead .wandl-col {
     padding: 3rem;
     border-radius: 20px;
     box-shadow: 0 25px 50px rgba(0,0,0,0.1);
-    max-width: 70%;
+    max-width: 600px;
     text-align: left;
     border: 1px solid var(--color-olive-200);
 }
@@ -4387,10 +4387,10 @@ thead .wandl-col {
     left: 50%;
     width: 0;
     height: 0;
-    animation: orbit-spin 60s linear infinite;
+    animation: orbit-spin 120s linear infinite; /* Half as fast */
     will-change: transform;
     z-index: 5;
-    --radius: 350px;
+    --radius: 500px; /* Images further away */
 }
 
 /* Orbit Items container */
@@ -4414,7 +4414,7 @@ thead .wandl-col {
     align-items: center;
     justify-content: center;
     padding: 15px;
-    animation: orbit-counter-spin 60s linear infinite;
+    animation: orbit-counter-spin 120s linear infinite; /* Half as fast */
     will-change: transform;
 }
 
@@ -4443,19 +4443,23 @@ thead .wandl-col {
 }
 
 /* Responsive adjustments */
-@media (max-width: 1024px) {
-    .orbit-ring { --radius: 300px; }
+@media (max-width: 1400px) {
+    .orbit-ring { --radius: 400px; }
     .orbit-item { width: 300px; height: 300px; margin-top: -150px; margin-left: -150px; }
-    .orbit-center { padding: 2rem; max-width: 80%; }
+}
+@media (max-width: 1024px) {
+    .orbit-ring { --radius: 350px; }
+    .orbit-item { width: 250px; height: 250px; margin-top: -125px; margin-left: -125px; }
+    .orbit-center { padding: 2rem; max-width: 500px; }
 }
 @media (max-width: 768px) {
-    .orbit-ring { --radius: 220px; }
+    .orbit-ring { --radius: 280px; }
     .orbit-item { width: 200px; height: 200px; margin-top: -100px; margin-left: -100px; }
-    .orbit-center { padding: 1.5rem; max-width: 85%; }
+    .orbit-center { padding: 1.5rem; max-width: 90%; }
     .orbit-section { padding: 4rem 0; }
 }
 @media (max-width: 480px) {
-    .orbit-ring { --radius: 160px; }
+    .orbit-ring { --radius: 180px; }
     .orbit-item { width: 140px; height: 140px; margin-top: -70px; margin-left: -70px; padding: 5px; }
-    .orbit-center { padding: 1.25rem; max-width: 90%; font-size: 0.9rem; }
+    .orbit-center { padding: 1.25rem; max-width: 95%; font-size: 0.9rem; }
 }

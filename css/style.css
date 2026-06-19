@@ -1133,11 +1133,24 @@ section {
     height: 45px;
     width: auto;
     object-fit: contain;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .logo-item a:hover img {
     transform: scale(1.05);
+}
+
+/* Add dark brown drop shadow to specific logos for better visibility */
+.logo-item img[alt="Kitchen4Rent"],
+.logo-item img[alt="youstartN"],
+.logo-item img[alt="Nutrikal"] {
+    filter: drop-shadow(0px 2px 6px rgba(60, 40, 20, 0.4));
+}
+
+.logo-item a:hover img[alt="Kitchen4Rent"],
+.logo-item a:hover img[alt="youstartN"],
+.logo-item a:hover img[alt="Nutrikal"] {
+    filter: drop-shadow(0px 4px 8px rgba(60, 40, 20, 0.6));
 }
 
 

@@ -4354,7 +4354,7 @@ thead .wandl-col {
 .orbit-wrapper {
     position: relative;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1800px;
     aspect-ratio: 1 / 1;
     margin: 0 auto;
     display: flex;
@@ -4400,12 +4400,12 @@ thead .wandl-col {
 /* Orbit Items container */
 .orbit-item {
     position: absolute;
-    width: 450px; 
-    height: 150px; 
+    width: 600px; 
+    height: 300px; 
     top: 50%;
     left: 50%;
-    margin-top: -75px; 
-    margin-left: -225px; 
+    margin-top: -150px; 
+    margin-left: -300px; 
     transform: rotate(var(--angle)) translateX(var(--radius));
 }
 
@@ -4423,8 +4423,8 @@ thead .wandl-col {
 }
 
 .orbit-item-inner img {
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     object-fit: contain;
     filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15));
     flex-shrink: 0;

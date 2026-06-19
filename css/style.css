@@ -171,6 +171,8 @@ body::after {
     height: calc(100vh + 480px); /* Ensure it covers viewport + max translate distance */
     z-index: var(--z-bg);
     pointer-events: none;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
 }
 
 /* Layer 1 â€” Large, slow '+' symbols */
@@ -196,13 +198,13 @@ body::after {
 }
 
 @keyframes plus-float-1 {
-    0%   { transform: translateY(0); }
-    100% { transform: translateY(-240px); }
+    0%   { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(0, -240px, 0); }
 }
 
 @keyframes plus-float-2 {
-    0%   { transform: translateY(0); }
-    100% { transform: translateY(-50%); }
+    0%   { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(0, -480px, 0); }
 }
 
 /* Grain / noise texture overlay for premium feel */
@@ -2719,11 +2721,13 @@ img.loaded {
     opacity: 0.12;
     animation: plus-float-up var(--duration, 20s) linear var(--delay, 0s) infinite;
     user-select: none;
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
 }
 
 @keyframes plus-float-up {
     0% {
-        transform: translateY(0) rotate(0deg);
+        transform: translate3d(0, 0, 0) rotate(0deg);
         opacity: 0;
     }
     10% {
@@ -2733,7 +2737,7 @@ img.loaded {
         opacity: 0.12;
     }
     100% {
-        transform: translateY(-110vh) rotate(180deg);
+        transform: translate3d(0, -110vh, 0) rotate(180deg);
         opacity: 0;
     }
 }

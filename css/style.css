@@ -4400,58 +4400,88 @@ thead .wandl-col {
 /* Orbit Items container */
 .orbit-item {
     position: absolute;
-    width: 600px; 
+    width: 300px; 
     height: 300px; 
     top: 50%;
     left: 50%;
     margin-top: -150px; 
-    margin-left: -300px; 
+    margin-left: -150px; 
     transform: rotate(var(--angle)) translateX(var(--radius));
+    z-index: 10;
+}
+
+.orbit-item:hover {
+    z-index: 20;
 }
 
 .orbit-item-inner {
     width: 100%;
     height: 100%;
     background: transparent;
+    position: relative;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    gap: 1.5rem;
+    justify-content: center;
     animation: orbit-counter-spin 120s linear infinite; /* Half as fast */
     will-change: transform;
 }
 
 .orbit-item-inner img {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15));
-    flex-shrink: 0;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* New text block */
+.orbit-item:hover .orbit-item-inner img {
+    transform: scale(1.1);
+}
+
+/* Pause animations on hover */
+.orbit-wrapper:hover .orbit-ring,
+.orbit-wrapper:hover .orbit-item-inner {
+    animation-play-state: paused;
+}
+
+/* New text block (Interactive Hover) */
 .orbit-text-block {
+    position: absolute;
+    left: calc(100% + 1rem);
+    top: 50%;
+    transform: translateY(-50%) translateX(-20px) scale(0.95);
     background: white;
-    padding: 1rem 1.5rem;
+    padding: 1.5rem 2rem;
     border-radius: 15px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
     border: 1px solid var(--color-olive-200);
-    flex-grow: 1;
+    width: 280px;
     text-align: left;
+    
+    /* Hover mechanics */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.orbit-item:hover .orbit-text-block {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(0) scale(1);
 }
 
 .orbit-text-block strong {
     display: block;
     color: var(--color-olive-500);
-    margin-bottom: 0.25rem;
-    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
 }
 
 .orbit-text-block p {
     margin: 0;
-    font-size: 0.95rem;
-    line-height: 1.4;
+    font-size: 1rem;
+    line-height: 1.5;
     color: var(--color-earth-800);
 }
 
@@ -4474,34 +4504,28 @@ thead .wandl-col {
 /* Responsive adjustments */
 @media (max-width: 1400px) {
     .orbit-ring { --radius: 400px; }
-    .orbit-item { width: 400px; height: 120px; margin-top: -60px; margin-left: -200px; }
-    .orbit-item-inner img { width: 120px; height: 120px; }
+    .orbit-item { width: 250px; height: 250px; margin-top: -125px; margin-left: -125px; }
 }
 @media (max-width: 1024px) {
     .orbit-ring { --radius: 350px; }
-    .orbit-item { width: 350px; height: 100px; margin-top: -50px; margin-left: -175px; }
-    .orbit-item-inner { gap: 1rem; }
-    .orbit-item-inner img { width: 100px; height: 100px; }
-    .orbit-text-block { padding: 0.75rem 1rem; }
-    .orbit-text-block strong { font-size: 1rem; }
-    .orbit-text-block p { font-size: 0.85rem; }
+    .orbit-item { width: 200px; height: 200px; margin-top: -100px; margin-left: -100px; }
+    .orbit-text-block { padding: 1rem 1.5rem; width: 250px; }
+    .orbit-text-block strong { font-size: 1.1rem; }
+    .orbit-text-block p { font-size: 0.9rem; }
     .orbit-center { padding: 1.5rem 2rem; max-width: 400px; }
 }
 @media (max-width: 768px) {
     .orbit-ring { --radius: 280px; }
-    .orbit-item { width: 200px; height: 250px; margin-top: -125px; margin-left: -100px; }
-    .orbit-item-inner { flex-direction: column; gap: 0.5rem; text-align: center; }
-    .orbit-item-inner img { width: 120px; height: 120px; }
-    .orbit-text-block { padding: 0.75rem; text-align: center; }
+    .orbit-item { width: 150px; height: 150px; margin-top: -75px; margin-left: -75px; }
+    .orbit-text-block { width: 200px; padding: 1rem; }
     .orbit-center { padding: 1rem 1.5rem; max-width: 90%; }
     .orbit-center h2 { font-size: 1.5rem; white-space: normal; }
     .orbit-section { padding: 4rem 0; }
 }
 @media (max-width: 480px) {
     .orbit-ring { --radius: 180px; }
-    .orbit-item { width: 140px; height: 180px; margin-top: -90px; margin-left: -70px; }
-    .orbit-item-inner img { width: 80px; height: 80px; }
-    .orbit-text-block { padding: 0.5rem; border-radius: 8px; }
-    .orbit-text-block strong { font-size: 0.8rem; margin-bottom: 0.1rem; }
-    .orbit-text-block p { font-size: 0.7rem; }
+    .orbit-item { width: 100px; height: 100px; margin-top: -50px; margin-left: -50px; }
+    .orbit-text-block { width: 160px; padding: 0.75rem; border-radius: 8px; left: calc(100% + 0.5rem); }
+    .orbit-text-block strong { font-size: 0.9rem; margin-bottom: 0.2rem; }
+    .orbit-text-block p { font-size: 0.8rem; }
 }

@@ -4447,13 +4447,12 @@ thead .wandl-col {
 /* New text block (Interactive Hover) */
 .orbit-text-positioner {
     position: absolute;
-    left: 50%;
     top: 50%;
-    width: 0;
-    height: 0;
+    transform: translateY(-50%);
     animation: text-flip 120s infinite step-end;
     animation-delay: var(--delay);
     z-index: 30;
+    display: flex; /* Helps contain the block cleanly */
 }
 
 .orbit-text-block {
@@ -4511,10 +4510,10 @@ thead .wandl-col {
 }
 
 @keyframes text-flip {
-    0%    { transform: translate(calc(150px + 1rem), -50%); }
-    25%   { transform: translate(calc(-150px - 1rem - 100%), -50%); }
-    75%   { transform: translate(calc(150px + 1rem), -50%); }
-    100%  { transform: translate(calc(150px + 1rem), -50%); }
+    0%    { left: calc(100% + 1rem); right: auto; }
+    25%   { left: auto; right: calc(100% + 1rem); }
+    75%   { left: calc(100% + 1rem); right: auto; }
+    100%  { left: calc(100% + 1rem); right: auto; }
 }
 
 /* Responsive adjustments */

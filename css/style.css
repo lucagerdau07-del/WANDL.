@@ -1141,6 +1141,10 @@ section {
 }
 
 /* Add dark brown drop shadow to specific logos for better visibility */
+.logo-item img[alt="Kitchen4Rent"] {
+    height: 68px; /* 50% larger */
+}
+
 .logo-item img[alt="Kitchen4Rent"],
 .logo-item img[alt="youstartN"],
 .logo-item img[alt="Nutrikal"] {

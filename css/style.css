@@ -4584,3 +4584,53 @@ thead .wandl-col {
     .orbit-text-block strong { font-size: 0.9rem; margin-bottom: 0.2rem; }
     .orbit-text-block p { font-size: 0.8rem; }
 }
+
+/* ==========================================================================
+   SYMBOL TRACK ANIMATION
+   ========================================================================== */
+.symbol-track {
+    position: fixed;
+    top: 0;
+    right: 3vw;
+    width: 80px;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.symbol-item {
+    position: absolute;
+    top: -200px;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fallDown 36s linear infinite;
+    opacity: 0.85;
+}
+
+.symbol-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.symbol-item span {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--color-olive-700);
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 0.5rem;
+    line-height: 1.2;
+}
+
+@keyframes fallDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(calc(100vh + 300px));
+    }
+}

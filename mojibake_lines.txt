@@ -1,0 +1,143 @@
+abos.html:79: <button type="button" class="hamburger" aria-label="Menü öffnen">
+abos.html:92: <h1>Wähle dein Abenteuer</h1>
+abos.html:97: <div class="abo-benefit">✅ Jederzeit kündbar</div>
+abos.html:99: <div class="abo-benefit">✅ Sorten frei wählbar</div>
+abos.html:122: <p class="price-subtitle">Der Treibstoff für Macher</p>
+abos.html:126: <li>12 Riegel (Sorten frei wählbar)</li>
+abos.html:128: <li>Jederzeit kündbar</li>
+abos.html:137: <p class="price-subtitle">Für die großen Abenteuer</p>
+abos.html:141: <li>24 Riegel (Sorten frei wählbar)</li>
+abos.html:143: <li>Jederzeit kündbar</li>
+abos.html:160: <p>Das Wesentliche für dein Abenteuer.</p>
+abos.html:161: <p class="footer-tagline">Zwei in Eins hochwertiger Energieriegel · Handgemacht in Hamburg</p>
+impressum.html:94: <p>Hier findest du alle wissenschaftlichen Studien, Marktanalysen und Zertifikate, auf die sich unsere Aussagen, Versprechen und Produkt-Entwicklungen stützen.</p>
+impressum.html:125: <div class="source-desc">Eine umfassende Meta-Analyse zur optimalen Proteinzufuhr (20g-Fenster) während und nach intensiven Trekking-Touren.</div>
+impressum.html:142: <div class="source-title">Prävalenz der 14 EU-Hauptallergene</div>
+impressum.html:143: <div class="source-desc">Studie des Europäischen Instituts für Lebensmittelallergien über die steigende Relevanz allergenfreier Notfallnahrung.</div>
+impressum.html:147: <span class="source-category">Ernährung</span>
+impressum.html:149: <div class="source-desc">Studie darüber, wie warme Mahlzeiten (unser Porridge-Konzept) die Nährstoffaufnahme in kalten Umgebungen (Alpenismus) im Vergleich zu kalten Snacks verbessern.</div>
+impressum.html:158: <p>&copy; 2026 WANDL. GbR, Hamburg. Alle Rechte vorbehalten. | <a href="index.html" style="color: var(--color-earth-600);">Zurück zur Startseite</a></p>
+index.html:7: <meta name="description" content="WANDL. ist der Zwei in Eins Riegel fÃ¼r dein Abenteuer. Kalt als Snack, warm mit heiÃŸem Wasser als Porridge. Vegan, allergenfrei, 20g Protein. Handgemacht in Hamburg.">
+index.html:51: <button type="button" class="hamburger" aria-label="MenÃ¼ Ã¶ffnen">
+index.html:99: <h3>ZerbrÃ¶seln</h3>
+index.html:104: <h3>AufgieÃŸen</h3>
+index.html:105: <p>Mit kochendem Wasser Ã¼bergieÃŸen, bis die StÃ¼ckchen bedeckt sind.</p>
+index.html:109: <h3>GenieÃŸen</h3>
+index.html:110: <p>90 Sekunden quellen lassen und umrÃ¼hren. Fertig ist das Porridge.</p>
+index.html:114: <p>Keine Zeit oder keine MÃ¶glichkeit zum ErwÃ¤rmen? GieÃŸe kaltes Wasser auf fÃ¼r ein erfrischendes kaltes Porridge oder genieÃŸe den Riegel direkt auf der Hand.</p>
+index.html:128: <p class="section-sub" style="font-size: 1.25rem; max-width: 600px; margin: 0 auto;">Echte Zutaten, echte Leistung. Ohne den Ã¼blichen Probleme mit dem Magen.</p>
+index.html:132: <span class="usp-icon">Ã°Å¸Å’Â¾</span>
+index.html:134: <p>Aus den besten Zutaten eines Porridges. 100% lÃ¶ffelbare Konsistenz nach 90s in heiÃŸem Wasser.</p>
+index.html:137: <span class="usp-icon">Ã°Å¸â€™Âª</span>
+index.html:139: <p>Volle Power durch natÃ¼rliche Proteinquellen.</p>
+index.html:142: <span class="usp-icon">Ã°Å¸Å’Â±</span>
+index.html:144: <p>0 % Erdnuss, Soja, Milch, Mandeln. Sicher fÃ¼r jeden Magen.</p>
+index.html:157: <p class="center-text section-sub" style="margin-bottom: 3rem;">Welche BedÃ¼rfnisse haben diese Personen?</p>
+index.html:164: <p>Weitwanderer, Trekker, Bushcrafter und Camper suchen extrem leichte, nÃ¤hrstoffdichte Nahrung.</p>
+index.html:182: <p>Maximale kÃ¶rperliche Belastung erfordert Regeneration.</p>
+index.html:183: <p><strong>Der Fokus:</strong> 20g hochwertiges Protein, komplexe Kohlenhydrate und hundertprozentige MagenvertrÃ¤glichkeit ohne Allergene.</p>
+index.html:208: <strong>StÃ¤rken:</strong>
+index.html:211: <li>GÃ¼nstiger Preis (~2,49 â‚¬)</li>
+index.html:215: <strong>SchwÃ¤chen:</strong>
+index.html:217: <li>Nicht allergenfrei (Soja, NÃ¼sse)</li>
+index.html:218: <li>Klebrig bei KÃ¤lte</li>
+index.html:239: <strong>StÃ¤rken:</strong>
+index.html:246: <strong>SchwÃ¤chen:</strong>
+index.html:248: <li>Sehr teuer (6,50 - 8,00 â‚¬)</li>
+index.html:265: <span class="comp-badge">Fitness MarktfÃ¼hrer</span>
+index.html:269: <strong>StÃ¤rken:</strong>
+index.html:272: <li>Ãœberall verfÃ¼gbar</li>
+index.html:276: <strong>SchwÃ¤chen:</strong>
+index.html:279: <li>Chemische SÃ¼ÃŸstoffe</li>
+index.html:302: <!-- Ã–kologische Nachhaltigkeit -->
+index.html:304: <h3 style="color: var(--color-earth-200); margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 0.5rem;">Ã–kologische Nachhaltigkeit</h3>
+index.html:306: <li style="margin-bottom: 1.2rem;"><strong>Pflanzlicher Fokus:</strong> Die Verwendung von Erbsenprotein und Hafer spart im Vergleich zu tierischem Molkenprotein (Whey) Ã¼ber 85 % COÃ¢â€šâ€š-Emissionen und 90 % Wasser.</li>
+index.html:307: <li style="margin-bottom: 1.2rem;"><strong>MÃ¼llreduktion:</strong> Verpackung in recyclebaren jonatura Barriere-Beuteln auf Zellulosebasis.</li>
+index.html:309: <li><strong>Regionale WertschÃ¶pfung:</strong> Produktion in einer Hamburger MietkÃ¼che vermindert Transportwege und COÃ¢â€šâ€š-Belastungen beim Logistikstart.</li>
+index.html:313: <!-- Ã–konomische & Soziale Nachhaltigkeit -->
+index.html:315: <!-- Ã–konomisch -->
+index.html:317: <h3 style="color: var(--color-earth-200); margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 0.5rem;">Ã–konomische Nachhaltigkeit</h3>
+index.html:319: <li style="margin-bottom: 1.2rem;"><strong>Subscription-Modell:</strong> Monatlich planbare Abonnements verhindern Ãœberproduktion (Keine Verschwendung in der Produktion).</li>
+index.html:320: <li><strong>Gesunde Marge:</strong> Die 64%ige Marge im Direktvertrieb sichert organisches Wachstum aus dem Cashflow, ohne riskante Kredite aufnehmen zu mÃ¼ssen.</li>
+index.html:327: <li style="margin-bottom: 1.2rem;"><strong>Transparenz:</strong> VollstÃ¤ndige Offenlegung der Zutaten und Kalkulation auf Social Media. Kein Greenwashing.</li>
+index.html:328: <li><strong>Lokales Engagement:</strong> Beteiligung von Hamburger SchÃ¼lern und enge Kooperation mit GrÃ¼ndungsnetzwerken.</li>
+index.html:456: <p>Um den Porridge Vorteil zu erhalten, wird WANDL. <strong>nicht klassisch gebacken</strong>. Die Haferflocken werden trocken vorgeröstet und die Riegel bei <strong>50-60 °C schonend gedörrt</strong>. Das entzieht Feuchtigkeit für eine feste Außenseite, gibt aber die volle Löslichkeit als Porridge.</p>
+index.html:460: <span>50-60 °C Dörrtemperatur</span>
+index.html:464: <span>aw-Wert unter 0,65 (Wasseraktivität)</span>
+index.html:478: <p style="margin-bottom: 0;">Ohne chemische Konservierungsstoffe. Durch schonende DÃ¶rrung und einen integrierten Sauerstoffabsorber bleibt WANDL. monatelang frisch.</p>
+index.html:498: <div style="font-family: var(--font-display); font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 900; color: var(--color-olive-500); text-transform: uppercase; letter-spacing: -1px; margin-top: -4rem; margin-bottom: 1.5rem; position: relative; z-index: 3; transform: rotate(-2deg); white-space: nowrap;">MÃœLLREDUKTION</div>
+index.html:504: Ã°Å¸Å’Â±
+index.html:508: <p style="color: var(--color-earth-600); line-height: 1.6;">Die spezielle Barriere-Verpackung schÃ¼tzt den Riegel perfekt und kann nach dem Verzehr einfach der Natur zurÃ¼ckgegeben werden. Keine PlastikrÃ¼ckstÃ¤nde auf dem Trail oder im MÃ¼ll.</p>
+index.html:514: Ã°Å¸Â¥Â£
+index.html:518: <p style="color: var(--color-earth-600); line-height: 1.6;">Kein zusÃ¤tzliches Geschirr notwendig! Die warme Zubereitung als Porridge ist problemlos direkt in unserer cleveren Verpackung mÃ¶glich. Einfach heiÃŸes Wasser aufgieÃŸen, umrÃ¼hren und genieÃŸen.</p>
+index.html:534: <span class="legal-icon">Ã°Å¸ÂÂ¢</span>
+index.html:537: <p style="font-size: 1.2rem; font-weight: 500;">GrÃ¼ndung erfolgt: 2 volljÃ¤hrige Gesellschafter, bÃ¼rgerliches Recht.</p>
+index.html:541: <span class="legal-icon">Ã°Å¸â€â€™</span>
+index.html:544: <p style="font-size: 1.2rem; font-weight: 500;">EuropÃ¤ische Wortmarke "WANDL" ist angemeldet (Klassen 29, 30, 32).</p>
+index.html:564: <p style="color: white !important; text-shadow: 0 2px 5px rgba(0,0,0,0.8); font-size: 1.2rem;">Lokale Produktion in Hamburger MietkÃ¼che. Fokus auf Onlinehandel (Abo-Modell) und Fachhandel-Kooperationen (z.B. Kletterhallen).</p>
+index.html:573: <p style="color: white !important; text-shadow: 0 2px 5px rgba(0,0,0,0.8); font-size: 1.2rem;">Aufbau eigener ProduktionskapazitÃ¤ten, Automatisierung der Verpackung. Listung im ausgewÃ¤hlten Fachhandel (Outdoor & Sport).</p>
+index.html:582: <p style="color: white !important; text-shadow: 0 2px 5px rgba(0,0,0,0.8); font-size: 1.2rem;">DACH-weiter Vertrieb Ã¼ber Fachhandel (Globetrotter etc.). Erweiterung des Produktsortiments.</p>
+index.html:597: <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.8;">Das hochwertige Segment fÃ¼r funktionelle Outdoor Nahrung wÃ¤chst extrem stark. Kunden in dieser Nische sind qualitÃ¤tsbewusst und suchen nach echten ProblemlÃ¶sern wie einer warmen Mahlzeit ohne schweres Kochgeschirr.</p>
+index.html:599: <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-olive-500);">Ã¢Å“â€</span> <strong>GroÃŸe Zielgruppe:</strong> In Deutschland <strong>wandern Ã¼ber vierzig Millionen Menschen</strong> regelmÃ¤ÃŸig. Der fokussierte DACH Raum umfasst hierbei <strong>circa zwei Millionen</strong> hochaffine Personen.</li>
+index.html:600: <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-olive-500);">Ã¢Å“â€</span> <strong>Milliardenmarkt:</strong> Der Markt fÃ¼r SporternÃ¤hrung und Mahlzeitersatz in DACH liegt bei <strong>Ã¼ber 1,2 Milliarden Euro</strong> mit konstanten Zuwachsraten von <strong>acht bis zehn Prozent</strong>.</li>
+index.html:601: <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-olive-500);">Ã¢Å“â€</span> <strong>Pflanzlicher Trend:</strong> <strong>Circa acht Millionen Vegetarier und knapp zwei Millionen Veganer</strong> in Deutschland fordern zunehmend rein pflanzliche Innovationen.</li>
+index.html:624: <strong>Transparente GrÃ¼ndung</strong>
+index.html:677: <p>PrÃ¤senz auf groÃŸen Outdoor-Messen.</p>
+index.html:702: <p class="finance-value" style="font-size: 2.5rem; color: var(--color-earth-900);">1.886,00 â‚¬</p>
+index.html:703: <p>Finanziert durch Eigenkapital der GrÃ¼nder, Crowdfunding und die youstartN FÃ¶rderung. Deckt Miete, Erstbestand an Zutaten, Verpackung und Zertifizierungen (wie das V Label).</p>
+index.html:707: <p class="finance-value" style="font-size: 2.5rem;">31.164,00 â‚¬</p>
+index.html:709: <p>Dies entspricht einem prognostizierten Nettogewinn von 18.541,00 â‚¬ im ersten vollen GeschÃ¤ftsjahr.</p>
+index.html:720: <p style="font-size: 2rem; font-weight: 800; color: var(--color-earth-900);">4,90 â‚¬</p>
+index.html:721: <p style="font-size: 0.85rem;">RegulÃ¤rer Einzelpreis</p>
+index.html:725: <p style="font-size: 0.9rem; color: var(--color-earth-400); text-transform: uppercase; font-weight: bold;">StÃ¼ckkosten</p>
+index.html:726: <p style="font-size: 2rem; font-weight: 800; color: var(--color-earth-900);">1,77 â‚¬</p>
+index.html:732: <p style="font-size: 2rem; font-weight: 800; color: var(--color-olive-500);">3,13 â‚¬</p>
+index.html:739: <p style="font-size: 1.2rem; margin-bottom: 0;">Fixkosten (114,50 â‚¬) geteilt durch Deckungsbeitrag (3,13 â‚¬) gleich <strong>37 Riegel</strong>.</p>
+index.html:740: <p style="font-size: 0.9rem; color: var(--color-earth-500); margin-top: 0.5rem;">Bereits ab dem siebenunddreiÃŸigsten verkauften Riegel pro Monat arbeiten wir profitabel.</p>
+index.html:782: <h2 class="center-text">HÃ¤ufige Fragen</h2>
+index.html:790: <p>WANDL. ist kein Snack, sondern eine vollwertige, schonend gedÃ¶rrte Mahlzeit aus 100% natÃ¼rlichen, allergiefreien hochwertigen Zutaten. Die aufwendige Herstellung garantiert die Zwei in Eins Funktion.</p>
+index.html:799: <p>Da wir die Haferflocken vorrÃ¶sten und schonend dÃ¶rren, bleiben sie strukturell intakt, kÃ¶nnen aber heiÃŸes Wasser sofort aufnehmen. In 90 Sekunden entsteht ein perfektes Porridge.</p>
+index.html:822: <p>Das Wesentliche fÃ¼r dein Abenteuer.</p>
+index.html:823: <p class="footer-tagline">Zwei in Eins hochwertiger Energieriegel Â· Handgemacht in Hamburg</p>
+index.html:837: <li><a href="#">Ã°Å¸â€œÂ± TikTok</a></li>
+index.html:838: <li><a href="#">Ã°Å¸â€œÂ¸ Instagram</a></li>
+product-classic.html:129: <button type="button" class="hamburger" aria-label="Menü öffnen">
+product-classic.html:150: <p class="product-description">Das ultimative Geschmackserlebnis. Molkenprotein und Vollmilchpulver für cremig-milchige Konsistenz, verfeinert mit Mandelmus und knackigen Mandelstücken.</p>
+product-classic.html:161: <p style="margin-bottom: 2rem; color: var(--color-earth-600); line-height: 1.6;">Zarthafer (feine Haferflocken), neutrales Molkenprotein Isolat (Whey), Vollmilchpulver, gehackte Mandeln, Meersalz, Agavendicksaft, feines Mandelmus (ohne Zuckerzusatz), kaltgepresstes Kokosöl.</p>
+product-classic.html:163: <h3>Nährwerte (pro 100g)</h3>
+product-classic.html:201: <p>Das Wesentliche für dein Abenteuer.</p>
+product-classic.html:202: <p class="footer-tagline">Zwei in Eins hochwertiger Energieriegel · Handgemacht in Hamburg</p>
+product-dark.html:129: <button type="button" class="hamburger" aria-label="Menü öffnen">
+product-dark.html:150: <p class="product-description">Für Schokoladen-Liebhaber. Edler Bio-Kakao trifft auf die natürliche, karamellige Süße reiner Agavendicksaft. Kraftvoll, herb und langanhaltend sättigend.</p>
+product-dark.html:162: <p style="margin-bottom: 2rem; color: var(--color-earth-600); line-height: 1.6;">Zarthafer (feine Haferflocken), Erbsenprotein Isolat, stark entöltes Kakaopulver, gehackte Kürbiskerne, Meersalz, flüssiger Vanilleextrakt, Agavendicksaft, Sonnenblumenkernbutter, kaltgepresstes Kokosöl.</p>
+product-dark.html:164: <h3>Nährwerte (pro 100g)</h3>
+product-dark.html:202: <p>Das Wesentliche für dein Abenteuer.</p>
+product-dark.html:203: <p class="footer-tagline">Zwei in Eins hochwertiger Energieriegel · Handgemacht in Hamburg</p>
+product-original.html:129: <button type="button" class="hamburger" aria-label="Menü öffnen">
+product-original.html:150: <p class="product-description">Die perfekte Balance aus nahrhaftem Bio-Hafer, cremigem Sonnenblumenkernmus und fruchtigen Waldheidelbeeren. Verfeinert mit Kürbiskernen und Meersalz.</p>
+product-original.html:162: <p style="margin-bottom: 2rem; color: var(--color-earth-600); line-height: 1.6;">Zarthafer (feine Haferflocken), Erbsenprotein Isolat, gehackte Kürbiskerne, gefriergetrocknete Heidelbeeren, Meersalz, Agavendicksaft, Sonnenblumenkernbutter, kaltgepresstes Kokosöl.</p>
+product-original.html:164: <h3>Nährwerte (pro 100g)</h3>
+product-original.html:202: <p>Das Wesentliche für dein Abenteuer.</p>
+product-original.html:203: <p class="footer-tagline">Zwei in Eins hochwertiger Energieriegel · Handgemacht in Hamburg</p>
+product-spice.html:129: <button type="button" class="hamburger" aria-label="Menü öffnen">
+product-spice.html:150: <p class="product-description">Perfekt für kalte Tage und besonders köstlich als warmes Porridge. Saftige Apfelstücke harmonieren mit edlem Ceylon-Zimt. Schmeckt wie frischer Apfelkuchen.</p>
+product-spice.html:162: <p style="margin-bottom: 2rem; color: var(--color-earth-600); line-height: 1.6;">Zarthafer (feine Haferflocken), Erbsenprotein Isolat, gefriergetrocknetes Apfelpulver, gemahlener Ceylon Zimt, gemahlener Kardamom, Meersalz, Agavendicksaft, Sonnenblumenkernbutter, kaltgepresstes Kokosöl.</p>
+product-spice.html:164: <h3>Nährwerte (pro 100g)</h3>
+product-spice.html:202: <p>Das Wesentliche für dein Abenteuer.</p>
+product-spice.html:203: <p class="footer-tagline">Zwei in Eins hochwertiger Energieriegel · Handgemacht in Hamburg</p>
+product.html:127: <button type="button" class="hamburger" aria-label="Menü öffnen">
+product.html:148: Hier siehst du die Detailansicht des Riegels. In Zukunft werden die Produktinformationen hier dynamisch anhand deiner Auswahl aus dem Shop geladen. Genieße die perfekte Balance aus nahrhaftem Bio-Hafer, hochwertigem Protein und unwiderstehlichem Geschmack.
+product.html:160: <p style="margin-bottom: 2rem; color: var(--color-earth-600); line-height: 1.6;">Zarthafer (feine Haferflocken), Erbsenprotein Isolat, gehackte Kürbiskerne, gefriergetrocknete Heidelbeeren, Meersalz, Agavendicksaft, Sonnenblumenkernbutter, kaltgepresstes Kokosöl.</p>
+product.html:162: <h3>Nährwerte (pro 100g)</h3>
+product.html:178: <td>12 g (nur aus Früchten/Agave)</td>
+product.html:200: <p>Das Wesentliche für dein Abenteuer.</p>
+product.html:201: <p class="footer-tagline">Zwei in Eins hochwertiger Energieriegel · Handgemacht in Hamburg</p>
+shop.html:108: <button type="button" class="hamburger" aria-label="Menü öffnen">
+shop.html:122: <p class="section-sub">Sichere dir deinen Vorrat an WANDL. Riegeln. Kalt genießen oder in 90s warm aufbrühen.</p>
+shop.html:138: <p class="product-desc">Bio-Hafer, cremiges Sonnenblumenkernmus und fruchtige Waldheidelbeeren. Verfeinert mit Kürbiskernen und Meersalz.</p>
+shop.html:165: <p class="product-desc">Für Schokoladen-Liebhaber. Edler Bio-Kakao trifft auf natürliche Agavensüße. Kraftvoll, herb und langanhaltend sättigend.</p>
+shop.html:192: <p class="product-desc">Perfekt für kalte Tage und als warmes Porridge. Saftige Apfelstücke harmonieren mit edlem Ceylon-Zimt.</p>
+shop.html:216: <p class="product-desc">Das ultimative Erlebnis. Molkenprotein und Vollmilchpulver für cremig-milchige Konsistenz, verfeinert mit Mandelstücken.</p>
+shop.html:223: <span class="product-note">⚠️ Enthält Milch & Nüsse</span>
+shop.html:242: <p>Das Wesentliche für dein Abenteuer.</p>
+shop.html:243: <p class="footer-tagline">Zwei in Eins hochwertiger Energieriegel · Handgemacht in Hamburg</p>

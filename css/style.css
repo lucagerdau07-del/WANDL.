@@ -4454,6 +4454,7 @@ thead .wandl-col {
     margin-left: -150px; 
     transform: rotate(var(--angle)) translateX(var(--radius));
     z-index: 10;
+    pointer-events: none; /* Ignore hover on the transparent square */
 }
 
 .orbit-item:hover {
@@ -4490,6 +4491,7 @@ thead .wandl-col {
     border-radius: 15px;
     filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15));
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    pointer-events: auto; /* Only the image itself should trigger hover */
 }
 
 .orbit-item:hover .orbit-image-wrapper img {

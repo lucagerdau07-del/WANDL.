@@ -4454,17 +4454,7 @@ thead .wandl-col {
     margin-left: -150px; 
     transform: rotate(var(--angle)) translateX(var(--radius));
     z-index: 10;
-}
-
-/* Add an invisible extended hitbox to capture hover over the scaled image */
-.orbit-item::after {
-    content: "";
-    position: absolute;
-    top: -40px;
-    left: -40px;
-    right: -40px;
-    bottom: -40px;
-    z-index: -1;
+    pointer-events: none; /* 1. Invisible to mouse by default */
 }
 
 .orbit-item:hover {
@@ -4501,6 +4491,7 @@ thead .wandl-col {
     border-radius: 15px;
     filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15));
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    pointer-events: auto; /* 2. Only the visible image pixels capture hover */
 }
 
 .orbit-item:hover .orbit-image-wrapper img {
@@ -4523,6 +4514,16 @@ thead .wandl-col {
     animation-delay: var(--delay);
     z-index: 30;
     display: flex; /* Helps contain the block cleanly */
+    
+    /* 3. Bridge the gap to the image so the mouse doesn't lose hover */
+    padding: 40px;
+    margin: -40px;
+    pointer-events: none;
+}
+
+/* 4. Make the text block and its bridge hoverable ONLY after the image is hovered */
+.orbit-item:hover .orbit-text-positioner {
+    pointer-events: auto;
 }
 
 .orbit-text-block {

@@ -4403,16 +4403,16 @@ thead .wandl-col {
     border-radius: 20px;
 }
 
-/* Image background with reduced opacity */
+/* Image background (fully opaque, double size) */
 .orbit-center::before {
     content: "";
     position: absolute;
-    top: -30%;
-    left: -10%;
-    right: -10%;
-    bottom: -30%;
+    top: -100%;
+    left: -50%;
+    right: -50%;
+    bottom: -100%;
     background: url('../assets/images/riegel_einzelnd.png') center/contain no-repeat;
-    opacity: 0.85; /* Transparent effect */
+    opacity: 1; /* Fully opaque */
     z-index: -2;
     filter: drop-shadow(0 15px 30px rgba(0,0,0,0.15));
 }

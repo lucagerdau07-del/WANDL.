@@ -4591,8 +4591,8 @@ thead .wandl-col {
 .symbol-track {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 50vw;
+    right: 0;
+    width: 35vw;
     height: 100vh;
     z-index: -1;
     pointer-events: none;
@@ -4601,39 +4601,47 @@ thead .wandl-col {
     justify-content: center;
 }
 
-.symbol-item {
-    position: absolute;
-    top: -800px;
-    width: 100%;
+.symbol-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: fallDown 36s linear infinite;
+    position: absolute;
+    top: -5400px;
+    animation: fallDownContinuous 45s linear infinite;
     opacity: 0.85;
 }
 
-.symbol-item img {
-    width: 600px;
+.symbol-item {
+    width: 400px;
     height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.symbol-item img {
+    width: 400px;
+    height: 400px;
     object-fit: contain;
 }
 
 .symbol-item span {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: var(--color-olive-700);
     text-transform: uppercase;
     text-align: center;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     line-height: 1.2;
     white-space: nowrap;
 }
 
-@keyframes fallDown {
+@keyframes fallDownContinuous {
     0% {
         transform: translateY(0);
     }
     100% {
-        transform: translateY(calc(100vh + 1600px));
+        transform: translateY(5400px);
     }
 }

@@ -1569,9 +1569,9 @@ section {
     margin: 0 auto var(--spacing-sm);
     border-radius: 50%;
     background: conic-gradient(
-        var(--color-olive-500) 0deg 190.8deg,       /* youstartN 1000â‚¬ â†’ 53% */
-        var(--color-olive-300) 190.8deg 286.2deg,    /* Crowdfunding 500â‚¬ â†’ 26.5% */
-        var(--color-earth-400) 286.2deg 360deg       /* Eigenkapital 386â‚¬ â†’ 20.5% */
+        var(--color-olive-500) 0deg 190.8deg,       /* youstartN 1000€ â†’ 53% */
+        var(--color-olive-300) 190.8deg 286.2deg,    /* Crowdfunding 500€ â†’ 26.5% */
+        var(--color-earth-400) 286.2deg 360deg       /* Eigenkapital 386€ â†’ 20.5% */
     );
     position: relative;
     box-shadow: var(--shadow-lg);
@@ -1584,7 +1584,7 @@ section {
 
 /* Donut hole */
 .chart-placeholder.pie::before {
-    content: '1.886â‚¬';
+    content: '1.886€';
     position: absolute;
     top: 50%;
     left: 50%;
@@ -3368,7 +3368,7 @@ img.loaded {
 }
 
 .pie-chart::after {
-    content: '1.886 â‚¬';
+    content: '1.886 €';
     position: absolute;
     top: 50%;
     left: 50%;

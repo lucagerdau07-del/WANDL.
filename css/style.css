@@ -4589,12 +4589,12 @@ thead .wandl-col {
    SYMBOL TRACK ANIMATION
    ========================================================================== */
 .symbol-track {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     width: 35vw;
-    height: 100vh;
-    z-index: -1;
+    height: 100%;
+    z-index: 1;
     pointer-events: none;
     overflow: hidden;
     display: flex;

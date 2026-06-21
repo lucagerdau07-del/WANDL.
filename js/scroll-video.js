@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!canvas) return;
     const context = canvas.getContext("2d");
 
-    const frameCount = 300;
-    const currentFrame = index => `assets/frames/ezgif-frame-${(index + 1).toString().padStart(3, '0')}.jpg`;
+    const frameCount = 239;
+    const currentFrame = index => `assets/frames/frame_${(index + 1).toString().padStart(3, '0')}.png`;
     
     const images = [];
     const animation = { frame: 0 };

@@ -4155,6 +4155,8 @@ thead .wandl-col {
 .target-info h3 {
     margin-bottom: 0.5rem;
     color: var(--color-olive-700);
+    hyphens: auto;
+    overflow-wrap: break-word;
 }
 .bullet-list {
     list-style: none;
@@ -4225,8 +4227,8 @@ thead .wandl-col {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     overflow: hidden;
-    position: relative;
-    padding-bottom: 160px;
+    display: flex;
+    flex-direction: column;
     height: 100%;
 }
 .comp-header {

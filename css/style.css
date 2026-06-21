@@ -3936,7 +3936,7 @@ thead .wandl-col {
 }
 #allergen-free .text-content {
     color: var(--color-white);
-    text-align: left;
+    text-align: center;
 }
 #allergen-free h2, #allergen-free .section-sub {
     text-shadow: none;
@@ -4090,7 +4090,8 @@ thead .wandl-col {
 
 /* Allergen Grid Spacing & Contrast */
 #allergen-free .allergen-grid {
-    gap: 6rem !important;
+    gap: 2rem !important;
+    justify-content: center !important;
 }
 #allergen-free h2, #allergen-free .label {
     color: #ffffff !important;

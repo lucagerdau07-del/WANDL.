@@ -297,5 +297,43 @@
     </footer>
 
     <script src="js/navigation.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            function highlightTarget() {
+                if (window.location.hash) {
+                    const target = document.querySelector(window.location.hash);
+                    if (target) {
+                        const elementsToHighlight = [target];
+                        let el = target;
+                        while (el.nextElementSibling && el.nextElementSibling.classList.contains('source-item')) {
+                            el = el.nextElementSibling;
+                            elementsToHighlight.push(el);
+                        }
+
+                        // Temporarily highlight
+                        elementsToHighlight.forEach(e => {
+                            e.style.transition = 'background-color 0.3s ease, transform 0.3s ease';
+                            e.style.backgroundColor = 'rgba(82, 110, 72, 0.15)'; // Light olive tint
+                            if(e.classList.contains('source-item')) e.style.transform = 'scale(1.02)';
+                        });
+
+                        // Remove highlight after 3 seconds
+                        setTimeout(() => {
+                            elementsToHighlight.forEach(e => {
+                                e.style.backgroundColor = '';
+                                if(e.classList.contains('source-item')) e.style.transform = '';
+                            });
+                        }, 3000);
+                    }
+                }
+            }
+
+            // Run on load with a slight delay to ensure rendering
+            setTimeout(highlightTarget, 100);
+
+            // Run on hash change
+            window.addEventListener('hashchange', highlightTarget);
+        });
+    </script>
 </body>
 </html>

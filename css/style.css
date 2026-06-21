@@ -4554,6 +4554,7 @@ thead .wandl-col {
     animation-delay: var(--delay);
     z-index: 30;
     display: flex; /* Helps contain the block cleanly */
+    align-items: center;
     
     /* 3. Bridge the gap to the image so the mouse doesn't lose hover */
     padding: 40px;

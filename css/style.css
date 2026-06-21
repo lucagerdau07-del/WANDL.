@@ -1752,8 +1752,10 @@ section {
    24. LEGAL (#legal)
    ========================================================================== */
 #legal.fullscreen-image-section.small {
-    height: 100vh;
-    min-height: 400px;
+    height: auto;
+    min-height: 120vh;
+    padding: 30vh 0;
+    box-sizing: border-box;
     background: url('../assets/images/bg-legal.png') center/cover no-repeat fixed;
 }
 

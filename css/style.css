@@ -4289,10 +4289,10 @@ thead .wandl-col {
 }
 .sv-sticky {
     position: sticky;
-    top: 0;
+    top: 70px; /* Push below navbar */
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 70px);
     overflow: hidden;
     display: flex;
     align-items: center;

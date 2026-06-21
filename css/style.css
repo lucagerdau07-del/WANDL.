@@ -4318,6 +4318,8 @@ thead .wandl-col {
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
 }
 .sv-canvas {
     position: absolute;

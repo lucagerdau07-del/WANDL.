@@ -67,6 +67,9 @@
     }
   });
 
+  // Apply stagger delays specifically to grid containers whose children are revealed
+  document.querySelectorAll('.allergen-grid').forEach(applyStaggerDelays);
+
   const revealObserver = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
@@ -463,7 +466,11 @@ document.addEventListener("DOMContentLoaded", () => {
             entries.forEach(entry => {
                 if(entry.isIntersecting) {
                     const bars = targetAnimContainer.querySelectorAll(".anim-target");
-                    bars.forEach(bar => bar.classList.add("animate-in"));
+                    bars.forEach((bar, i) => {
+                        setTimeout(() => {
+                            bar.classList.add("animate-in");
+                        }, i * 150);
+                    });
                     observer.unobserve(targetAnimContainer);
                 }
             });

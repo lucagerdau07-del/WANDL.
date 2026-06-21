@@ -3919,6 +3919,8 @@ thead .wandl-col {
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));
+    mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
 }
 
 #allergen-free {

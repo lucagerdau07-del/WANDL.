@@ -4283,7 +4283,7 @@ thead .wandl-col {
     position: relative;
     height: 400vh; /* Determines how long you have to scroll to play the animation */
     width: 100%;
-    background: #000;
+    background: transparent;
     margin-top: 0;
     padding-top: 0;
 }

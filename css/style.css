@@ -1002,8 +1002,8 @@ section {
     );
     background-size: cover;
     background-position: center;
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%);
 }
 
 #production.fullscreen-image-section {
@@ -4379,10 +4379,10 @@ thead .wandl-col {
     height: 50%;
     background: linear-gradient(135deg, var(--color-earth-100) 0%, var(--color-earth-200) 100%);
     z-index: 0;
-    -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 150px), linear-gradient(90deg, transparent 0%, black 150px);
-        -webkit-mask-composite: source-in;
-    mask-image: linear-gradient(180deg, transparent 0%, black 150px), linear-gradient(90deg, transparent 0%, black 150px);
-        mask-composite: intersect;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 150px, black calc(100% - 150px), transparent 100%), linear-gradient(90deg, transparent 0%, black 150px);
+    mask-image: linear-gradient(180deg, transparent 0%, black 150px, black calc(100% - 150px), transparent 100%), linear-gradient(90deg, transparent 0%, black 150px);
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
 }
 @media (min-width: 768px) {
     .packaging-section::before {

@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css?v=1.0.41">
+    <link rel="stylesheet" href="css/style.css?v=1.0.42">
 <!-- GSAP & ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -153,37 +153,146 @@
              ============================================================ -->
         <section id="target-audience">
             <div class="container">
-                <h2 class="center-text">Unsere Zielgruppe</h2>
-                <p class="center-text section-sub" style="margin-bottom: 3rem;">Welche Bedürfnisse haben diese Personen?</p>
+                <h2 class="center-text">Unsere Zielgruppen</h2>
+                <p class="center-text section-sub" style="margin-bottom: 3rem;">Qualitative Analyse der Zielgruppen und Bedarfstreiber</p>
                 <div class="target-vertical-grid" id="target-anim-container">
                     
+                    <!-- 1. Outdoor -->
                     <div class="target-bar anim-target">
-                        <img src="assets/images/target-outdoor.png" alt="Outdoor Enthusiasten" style="height: 250px; width: 100%; object-fit: cover; border-bottom: 4px solid var(--color-olive-500); display: block;">
+                        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=800" alt="Outdoor Enthusiasten" style="height: 250px; width: 100%; object-fit: cover; border-bottom: 4px solid var(--color-olive-500); display: block;">
                         <div class="target-info">
-                            <h3>Outdoor Enthusiasten</h3>
-                            <p>Weitwanderer, Trekker, Bushcrafter und Camper suchen extrem leichte, nährstoffdichte Nahrung.</p>
-                            <p><strong>Der Fokus:</strong> Wegfall von Gaskocher, Topf und schwerem Brennstoff.</p>
+                            <h3>Outdoor-Enthusiasten</h3>
+                            <p style="margin-bottom: 1rem; font-weight: 500;">Weitwanderer, Alpinisten & Trekker.</p>
+                            <ul class="bullet-list">
+                                <li><strong>Minimales Packgewicht:</strong> Hohe Nährstoffdichte bei extrem wenig Gewicht.</li>
+                                <li><strong>Kein Geschirr nötig:</strong> Wegfall von Gaskocher, Topf und schwerem Brennstoff.</li>
+                                <li><strong>100% Flexibel:</strong> Zubereitung mit heißem oder kaltem Wasser – oder direkt als Snack.</li>
+                                <li><strong>Eco-Friendly:</strong> Kompostierbare Verpackung löst das Entsorgungsproblem auf dem Trail.</li>
+                            </ul>
                         </div>
                     </div>
                     
+                    <!-- 2. Performers -->
                     <div class="target-bar anim-target">
-                        <img src="assets/images/target-performer.png" alt="Performers & Professionals" style="height: 250px; width: 100%; object-fit: cover; border-bottom: 4px solid var(--color-olive-500); display: block;">
+                        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=800" alt="Performers & Professionals" style="height: 250px; width: 100%; object-fit: cover; border-bottom: 4px solid var(--color-olive-500); display: block;">
                         <div class="target-info">
                             <h3>Performers & Professionals</h3>
-                            <p>Berufspendler und Studierende im stressigen Alltag brauchen eine schnelle, gesunde Mahlzeit.</p>
-                            <p><strong>Der Fokus:</strong> Zubereitung in Sekunden ohne Mikrowelle und langanhaltende Energie ohne Mittagstief.</p>
+                            <p style="margin-bottom: 1rem; font-weight: 500;">Büroangestellte, Pendler & Studierende.</p>
+                            <ul class="bullet-list">
+                                <li><strong>Sekundenschnell:</strong> Zubereitung als bequemer "Desk-Lunch" ohne langes Spülen.</li>
+                                <li><strong>Stabile Energie:</strong> Komplexe Kohlenhydrate verhindern das typische Mittagstief.</li>
+                                <li><strong>Gesund im Stress:</strong> Vollwertige Mahlzeit trotz hektischer, urbaner Zeitpläne.</li>
+                            </ul>
                         </div>
                     </div>
                     
+                    <!-- 3. Sportler -->
                     <div class="target-bar anim-target">
-                        <img src="assets/images/target-sports.png" alt="Sportler & Alpinisten" style="height: 250px; width: 100%; object-fit: cover; border-bottom: 4px solid var(--color-olive-500); display: block;">
+                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800" alt="Sportler & Alpinisten" style="height: 250px; width: 100%; object-fit: cover; border-bottom: 4px solid var(--color-olive-500); display: block;">
                         <div class="target-info">
-                            <h3>Sportler & Alpinisten</h3>
-                            <p>Maximale körperliche Belastung erfordert Regeneration.</p>
-                            <p><strong>Der Fokus:</strong> 20g hochwertiges Protein, komplexe Kohlenhydrate und hundertprozentige Magenverträglichkeit ohne Allergene.</p>
+                            <h3>Leistungs- & Breitensportler</h3>
+                            <p style="margin-bottom: 1rem; font-weight: 500;">Athleten und Fitness-Enthusiasten.</p>
+                            <ul class="bullet-list">
+                                <li><strong>Perfekte Regeneration:</strong> 20 % rein pflanzliches Protein (20g pro Ration).</li>
+                                <li><strong>Magenverträglichkeit:</strong> Keine Verdauungsprobleme durch den konsequenten Verzicht auf Whey.</li>
+                                <li><strong>Post-Workout:</strong> Ideale Kombination aus Kohlenhydraten & Proteinen für den Muskelaufbau.</li>
+                            </ul>
                         </div>
                     </div>
 
+                    <!-- 4. Allergiker -->
+                    <div class="target-bar anim-target">
+                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=800" alt="Allergiker" style="height: 250px; width: 100%; object-fit: cover; border-bottom: 4px solid var(--color-olive-500); display: block;">
+                        <div class="target-info">
+                            <h3>Allergiker & Unverträglichkeiten</h3>
+                            <p style="margin-bottom: 1rem; font-weight: 500;">Zöliakie, Laktoseintoleranz & Nussallergien.</p>
+                            <ul class="bullet-list">
+                                <li><strong>100 % Sicher:</strong> Streng frei von den 14 EU-Hauptallergenen (u.a. Soja, Milch, Gluten).</li>
+                                <li><strong>Keine Kontamination:</strong> Absolute funktionale Sicherheit beim Kauf und Verzehr.</li>
+                                <li><strong>Stressfrei:</strong> Die perfekte Lösung für unterwegs, ohne langes Zutaten-Lesen.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 5. Veganer -->
+                    <div class="target-bar anim-target">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800" alt="Veganer" style="height: 250px; width: 100%; object-fit: cover; border-bottom: 4px solid var(--color-olive-500); display: block;">
+                        <div class="target-info">
+                            <h3>Veganer & Flexitarier</h3>
+                            <p style="margin-bottom: 1rem; font-weight: 500;">Nachhaltigkeitsorientierte Konsumenten.</p>
+                            <ul class="bullet-list">
+                                <li><strong>Ressourcenschonend:</strong> Spart >85 % CO₂ und 90 % Wasser gegenüber Whey-Produkten.</li>
+                                <li><strong>Energieeffizient:</strong> Die backfreie Dörrung spart massiv Energie bei der Produktion.</li>
+                                <li><strong>Ethischer Konsum:</strong> Transparente soziale und ökologische Verantwortung.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- NEW QUANTITATIVE TABLE -->
+                <h3 class="center-text" style="margin-top: 5rem; margin-bottom: 2rem; color: var(--color-olive-700);">Quantitative Marktgrößen</h3>
+                <div style="overflow-x: auto; padding-bottom: 1rem;">
+                    <table style="width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); min-width: 800px;">
+                        <thead>
+                            <tr style="background: var(--color-earth-200); text-align: left;">
+                                <th style="padding: 1rem 1.5rem; border-bottom: 2px solid var(--color-earth-300);">Zielgruppensegment</th>
+                                <th style="padding: 1rem 1.5rem; border-bottom: 2px solid var(--color-earth-300);">Marktgröße (DE)</th>
+                                <th style="padding: 1rem 1.5rem; border-bottom: 2px solid var(--color-earth-300);">Marktgröße (Weltweit)</th>
+                                <th style="padding: 1rem 1.5rem; border-bottom: 2px solid var(--color-earth-300);">Datenquellen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid var(--color-earth-200);">
+                                <td style="padding: 1rem 1.5rem;"><strong>Outdoor-Enthusiasten</strong></td>
+                                <td style="padding: 1rem 1.5rem;"><strong>> 40,0 Mio.</strong><br><span style="font-size:0.85rem; color:var(--color-earth-700);">DACH: ~2,0 Mio. Hochaffine</span></td>
+                                <td style="padding: 1rem 1.5rem;"><strong>> 1,20 Mrd.</strong><br><span style="font-size:0.85rem; color:var(--color-earth-700);">USA: 63,0 Mio.</span></td>
+                                <td style="padding: 1rem 1.5rem; font-size:0.85rem; color:var(--color-earth-700);">IfD Allensbach, BTE, OIA</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--color-earth-200);">
+                                <td style="padding: 1rem 1.5rem;"><strong>Berufspendler</strong></td>
+                                <td style="padding: 1rem 1.5rem;"><strong>20,59 Mio.</strong><br><span style="font-size:0.85rem; color:var(--color-earth-700);">~60 % aller Beschäftigten</span></td>
+                                <td style="padding: 1rem 1.5rem;"><strong>-</strong><br><span style="font-size:0.85rem; color:var(--color-earth-700);">>75 % der Europäer in Ballungsräumen</span></td>
+                                <td style="padding: 1rem 1.5rem; font-size:0.85rem; color:var(--color-earth-700);">BBSR, Destatis</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--color-earth-200);">
+                                <td style="padding: 1rem 1.5rem;"><strong>Studierende</strong></td>
+                                <td style="padding: 1rem 1.5rem;"><strong>2,88 Mio.</strong><br><span style="font-size:0.85rem; color:var(--color-earth-700);">Wintersemester 2025/26</span></td>
+                                <td style="padding: 1rem 1.5rem;"><strong>> 250 Mio.</strong><br><span style="font-size:0.85rem; color:var(--color-earth-700);">Weltweiter tertiärer Sektor</span></td>
+                                <td style="padding: 1rem 1.5rem; font-size:0.85rem; color:var(--color-earth-700);">Destatis, DLF</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--color-earth-200);">
+                                <td style="padding: 1rem 1.5rem;"><strong>Leistungs- & Fitnesssportler</strong></td>
+                                <td style="padding: 1rem 1.5rem;"><strong>9,3 - 11,6 Mio.</strong><br><span style="font-size:0.85rem; color:var(--color-earth-700);">Studiomitglieder in DE</span></td>
+                                <td style="padding: 1rem 1.5rem;"><strong>> 184 Mio.</strong><br><span style="font-size:0.85rem; color:var(--color-earth-700);">Globaler Markt: 59,1 Mrd. USD</span></td>
+                                <td style="padding: 1rem 1.5rem; font-size:0.85rem; color:var(--color-earth-700);">DSSV, IMARC Group</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--color-earth-200);">
+                                <td style="padding: 1rem 1.5rem;"><strong>Zöliakie & Gluten-Sensitiv</strong></td>
+                                <td style="padding: 1rem 1.5rem;"><strong>~840.000</strong><br><span style="font-size:0.85rem; color:var(--color-earth-700);">0,5 % - 1,0 % Prävalenz</span></td>
+                                <td style="padding: 1rem 1.5rem;"><strong>~83,0 Mio.</strong><br><span style="font-size:0.85rem; color:var(--color-earth-700);">Inzidenz steigt um 7,5 % p.a.</span></td>
+                                <td style="padding: 1rem 1.5rem; font-size:0.85rem; color:var(--color-earth-700);">DZG, Dr. Schär Institute</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--color-earth-200);">
+                                <td style="padding: 1rem 1.5rem;"><strong>Laktoseintoleranz</strong></td>
+                                <td style="padding: 1rem 1.5rem;"><strong>11,5 - 13,0 Mio.</strong><br><span style="font-size:0.85rem; color:var(--color-earth-700);">14 % - 16 % Prävalenz</span></td>
+                                <td style="padding: 1rem 1.5rem;"><strong>> 5,30 Mrd.</strong><br><span style="font-size:0.85rem; color:var(--color-earth-700);">~65 % der Weltbevölkerung</span></td>
+                                <td style="padding: 1rem 1.5rem; font-size:0.85rem; color:var(--color-earth-700);">European Dairy Association</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--color-earth-200);">
+                                <td style="padding: 1rem 1.5rem;"><strong>Nahrungsmittelallergiker</strong></td>
+                                <td style="padding: 1rem 1.5rem;"><strong>2,5 - 5,0 Mio.</strong><br><span style="font-size:0.85rem; color:var(--color-earth-700);">Selbsteinschätzung ~30 %</span></td>
+                                <td style="padding: 1rem 1.5rem;"><strong>> 830 Mio.</strong><br><span style="font-size:0.85rem; color:var(--color-earth-700);">>10 % der Weltbevölkerung</span></td>
+                                <td style="padding: 1rem 1.5rem; font-size:0.85rem; color:var(--color-earth-700);">BfR, WHO, ECARF</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1rem 1.5rem;"><strong>Veganer & Vegetarier</strong></td>
+                                <td style="padding: 1rem 1.5rem;"><strong>~9,0 Mio.</strong><br><span style="font-size:0.85rem; color:var(--color-earth-700);">Davon ca. 2,0 Mio. vegan</span></td>
+                                <td style="padding: 1rem 1.5rem;"><strong>~1,49 Mrd.</strong><br><span style="font-size:0.85rem; color:var(--color-earth-700);">~22 % der Weltbevölkerung</span></td>
+                                <td style="padding: 1rem 1.5rem; font-size:0.85rem; color:var(--color-earth-700);">ProVeg, The Vegan Society</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
@@ -196,6 +305,7 @@
                 <h2 class="center-text" style="margin-bottom: 3rem;">Konkurrenzanalyse</h2>
                 <div class="competition-cards">
                     
+                    <!-- 1. Clif Bar -->
                     <div class="comp-card" style="border-top: 4px solid var(--color-earth-300);">
                         <div class="comp-header">
                             <div style="height: 135px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem;">
@@ -206,27 +316,28 @@
                         <div class="comp-body">
                             <div class="comp-pros">
                                 <strong>Stärken:</strong>
-                                <ul>
-                                    <li>Hohe Bekanntheit</li>
+                                <ul style="padding-left: 1.2rem; margin-top: 0.5rem;">
+                                    <li>Sehr hohe Markenbekanntheit</li>
                                     <li>Günstiger Preis (~2,49 €)</li>
+                                    <li>Hoher Kohlenhydratanteil</li>
                                 </ul>
                             </div>
-                            <div class="comp-cons">
+                            <div class="comp-cons" style="margin-top: 1rem;">
                                 <strong>Schwächen:</strong>
-                                <ul>
-                                    <li>Nicht allergenfrei (Soja, Nüsse)</li>
-                                    <li>Klebrig bei Kälte</li>
-                                    <li>Viel industrieller Zucker</li>
-                                    <li>Nicht als Porridge nutzbar</li>
+                                <ul style="padding-left: 1.2rem; margin-top: 0.5rem;">
+                                    <li>Nicht allergenfrei (Soja, Nüsse, Gluten)</li>
+                                    <li>Hoher Anteil an Industriezucker</li>
+                                    <li>Wird bei Kälte extrem zäh & schwer kaubar</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="comp-usp">
                             <strong>WANDL. Vorteil:</strong><br>
-                            100% Allergenfrei & warm essbar.
+                            100 % allergenfrei & echte warme Mahlzeit.
                         </div>
                     </div>
 
+                    <!-- 2. Radix -->
                     <div class="comp-card" style="border-top: 4px solid var(--color-earth-500);">
                         <div class="comp-header">
                             <div style="height: 135px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem;">
@@ -237,26 +348,27 @@
                         <div class="comp-body">
                             <div class="comp-pros">
                                 <strong>Stärken:</strong>
-                                <ul>
-                                    <li>Sehr funktionell</li>
-                                    <li>Wissenschaftlich optimiert</li>
+                                <ul style="padding-left: 1.2rem; margin-top: 0.5rem;">
+                                    <li>Extrem funktionell</li>
+                                    <li>Wissenschaftlich optimierte Nährstoffdichte</li>
                                 </ul>
                             </div>
-                            <div class="comp-cons">
+                            <div class="comp-cons" style="margin-top: 1rem;">
                                 <strong>Schwächen:</strong>
-                                <ul>
-                                    <li>Sehr teuer (6,50 - 8,00 €)</li>
+                                <ul style="padding-left: 1.2rem; margin-top: 0.5rem;">
+                                    <li>Sehr hoher Preis (6,50 - 8,00 €)</li>
                                     <li>Nur als Pulver transportierbar</li>
-                                    <li>Nicht direkt als Riegel essbar</li>
+                                    <li>Zwingend Schüssel & Besteck nötig</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="comp-usp">
                             <strong>WANDL. Vorteil:</strong><br>
-                            Kalt als kompakter Snack unterwegs essbar.
+                            Dualität: Auch direkt als Snack aus der Hand essbar.
                         </div>
                     </div>
 
+                    <!-- 3. Barebells -->
                     <div class="comp-card" style="border-top: 4px solid var(--color-earth-300);">
                         <div class="comp-header">
                             <div style="height: 135px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem;">
@@ -267,23 +379,56 @@
                         <div class="comp-body">
                             <div class="comp-pros">
                                 <strong>Stärken:</strong>
-                                <ul>
-                                    <li>Sehr guter Geschmack</li>
-                                    <li>Überall verfügbar</li>
+                                <ul style="padding-left: 1.2rem; margin-top: 0.5rem;">
+                                    <li>Sehr hohe geschmackliche Akzeptanz</li>
+                                    <li>Flächendeckende Verfügbarkeit</li>
                                 </ul>
                             </div>
-                            <div class="comp-cons">
+                            <div class="comp-cons" style="margin-top: 1rem;">
                                 <strong>Schwächen:</strong>
-                                <ul>
-                                    <li>Milchprotein (nicht vegan)</li>
-                                    <li>Chemische Süßstoffe</li>
-                                    <li>Kein Outdoor-Fokus</li>
+                                <ul style="padding-left: 1.2rem; margin-top: 0.5rem;">
+                                    <li>Basiert auf Milchprotein (nicht vegan)</li>
+                                    <li>Enthält chemische Süßstoffe</li>
+                                    <li>Keinerlei Eignung für den Outdoorbereich</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="comp-usp">
                             <strong>WANDL. Vorteil:</strong><br>
-                            Rein pflanzlich, ohne Zusatzstoffe & echte Mahlzeit.
+                            Rein pflanzlich, Clean Label & warme Zubereitung.
+                        </div>
+                    </div>
+
+                    <!-- 4. WANDL -->
+                    <div class="comp-card wandl-col" style="border-top: 4px solid var(--color-olive-500); position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(133, 163, 58, 0.2);">
+                        <!-- Highlight Banner -->
+                        <div style="position: absolute; top: 15px; right: -30px; background: var(--color-olive-500); color: white; padding: 5px 30px; transform: rotate(45deg); font-size: 0.8rem; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">UNSER PRODUKT</div>
+                        <div class="comp-header">
+                            <div style="height: 135px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem;">
+                                <img src="assets/images/WANDL_logo_RGB.svg" alt="WANDL." style="max-height: 45px; max-width: 100%; object-fit: contain;">
+                            </div>
+                            <span class="comp-badge" style="background: var(--color-olive-100); color: var(--color-olive-700);">Zwei-in-Eins-Mahlzeit</span>
+                        </div>
+                        <div class="comp-body">
+                            <div class="comp-pros">
+                                <strong>Stärken:</strong>
+                                <ul style="padding-left: 1.2rem; margin-top: 0.5rem;">
+                                    <li>Duale Funktion (Riegel & warmes Porridge)</li>
+                                    <li>100 % allergenfrei und vegan</li>
+                                    <li>Kompostierbare Verpackung (Zubereitung direkt im Beutel)</li>
+                                </ul>
+                            </div>
+                            <div class="comp-cons" style="margin-top: 1rem;">
+                                <strong>Schwächen:</strong>
+                                <ul style="padding-left: 1.2rem; margin-top: 0.5rem;">
+                                    <li>Höherer Stückpreis (4,90 €) vs. Standardriegel</li>
+                                    <li>Bislang geringe Markenbekanntheit</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comp-usp" style="background: var(--color-olive-500); color: white;">
+                            <strong>Fazit:</strong><br>
+                            Die hybride Innovation für Sport, Alltag und Outdoor.
                         </div>
                     </div>
 
@@ -591,15 +736,45 @@
              ============================================================ -->
         <section style="padding: 5rem 0; background-color: transparent;">
             <div class="container">
-                <!-- Marktpotenzial -->
-                <div style="max-width: 800px; margin: 0 auto 5rem auto; text-align: center;">
-                    <h2 style="margin-bottom: 1.5rem;">Marktpotenzial</h2>
-                    <p style="margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.8;">Das hochwertige Segment für funktionelle Outdoor Nahrung wächst extrem stark. Kunden in dieser Nische sind qualitätsbewusst und suchen nach echten Problemlösern wie einer warmen Mahlzeit ohne schweres Kochgeschirr.</p>
-                    <ul style="list-style: none; padding: 0; text-align: left; display: inline-block;">
-                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-olive-500);">✔️</span> <strong>Große Zielgruppe:</strong> In Deutschland <strong>wandern über vierzig Millionen Menschen</strong> regelmäßig. Der fokussierte DACH Raum umfasst hierbei <strong>circa zwei Millionen</strong> hochaffine Personen.</li>
-                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-olive-500);">✔️</span> <strong>Milliardenmarkt:</strong> Der Markt für Sporternährung und Mahlzeitersatz in DACH liegt bei <strong>über 1,2 Milliarden Euro</strong> mit konstanten Zuwachsraten von <strong>acht bis zehn Prozent</strong>.</li>
-                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--color-olive-500);">✔️</span> <strong>Pflanzlicher Trend:</strong> <strong>Circa acht Millionen Vegetarier und knapp zwei Millionen Veganer</strong> in Deutschland fordern zunehmend rein pflanzliche Innovationen.</li>
-                    </ul>
+                <!-- Ökonomie & Strategie -->
+                <div style="max-width: 1100px; margin: 0 auto 5rem auto;">
+                    <h2 class="center-text" style="margin-bottom: 3rem;">Ökonomie & Strategischer Ausblick</h2>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                        <!-- Marge & Break-Even -->
+                        <div style="background: white; border-radius: 16px; padding: 2rem; box-shadow: var(--shadow-md); border-top: 4px solid var(--color-olive-500); text-align: left;">
+                            <h3 style="color: var(--color-olive-700); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;"><span style="font-size: 1.5rem;">💶</span> Margenstruktur</h3>
+                            <ul class="bullet-list" style="font-size: 1.05rem;">
+                                <li><strong>Verkaufspreis:</strong> 4,90 € pro Mahlzeit</li>
+                                <li><strong>Stückkosten:</strong> -1,77 € <br><span style="font-size: 0.85rem; color: #666; font-weight: normal;">(Rohstoffe, Verpackung, Miete)</span></li>
+                                <li><strong>Deckungsbeitrag:</strong> 3,13 € <br><span style="font-size: 0.85rem; color: #666; font-weight: normal;">(entspricht ~64 % Bruttomarge)</span></li>
+                            </ul>
+                            <div style="margin-top: 1.5rem; padding: 1rem; background: var(--color-olive-100); border-radius: 8px; color: var(--color-olive-800); font-weight: 500; font-size: 0.95rem;">
+                                Break-Even-Point bei nur <strong>37 Riegeln pro Monat</strong> (Fixkosten: 114,50 €).
+                            </div>
+                        </div>
+
+                        <!-- Finanzierung & Prognose -->
+                        <div style="background: white; border-radius: 16px; padding: 2rem; box-shadow: var(--shadow-md); border-top: 4px solid var(--color-earth-500); text-align: left;">
+                            <h3 style="color: var(--color-olive-700); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;"><span style="font-size: 1.5rem;">📈</span> Ein-Jahres-Prognose</h3>
+                            <ul class="bullet-list" style="font-size: 1.05rem;">
+                                <li><strong>Startkapital:</strong> 1.886,00 € <br><span style="font-size: 0.85rem; color: #666; font-weight: normal;">(Bootstrapping, Crowdfunding & youstartN)</span></li>
+                                <li><strong>Zertifizierung:</strong> Offizielles V-Label finanziert.</li>
+                                <li><strong>Absatzziel:</strong> 6.360 Riegel im 1. Jahr.</li>
+                                <li><strong>Nettogewinn:</strong> 18.541,00 € <br><span style="font-size: 0.85rem; color: #666; font-weight: normal;">(Reinvestition für Skalierungsphase)</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Strategische Nische -->
+                        <div style="background: white; border-radius: 16px; padding: 2rem; box-shadow: var(--shadow-md); border-top: 4px solid var(--color-earth-300); text-align: left;">
+                            <h3 style="color: var(--color-olive-700); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;"><span style="font-size: 1.5rem;">🎯</span> Strategische Nische</h3>
+                            <p style="margin-bottom: 1rem; line-height: 1.6; font-size: 0.95rem;">WANDL. entzieht sich dem ruinösen Preiswettbewerb des Massenmarktes durch hochfunktionale Mehrwerte:</p>
+                            <ul class="bullet-list" style="font-size: 1.05rem;">
+                                <li><strong>Megatrends:</strong> Steigende Lebensmittelunverträglichkeiten & ethisch-ökologischer Konsum.</li>
+                                <li><strong>Zahlungsbereitschaft:</strong> Hohe Akzeptanz der Zielgruppe für vollwertige Problemlöser.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
             

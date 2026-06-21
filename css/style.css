@@ -4180,7 +4180,7 @@ thead .wandl-col {
     top: 0;
     color: var(--color-olive-500);
     font-weight: bold;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    text-shadow: 0 4px 15px rgba(0,0,0,1);
 }
 .target-info p {
     font-size: 1rem;

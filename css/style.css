@@ -1002,6 +1002,8 @@ section {
     );
     background-size: cover;
     background-position: center;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
 #production.fullscreen-image-section {

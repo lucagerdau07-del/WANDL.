@@ -1759,6 +1759,11 @@ section {
     background: url('../assets/images/bg-legal.png') center/cover no-repeat fixed;
 }
 
+#legal .overlay {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
 @media screen and (min-width: 768px) {
     #legal .overlay {
         margin-left: 8vw;

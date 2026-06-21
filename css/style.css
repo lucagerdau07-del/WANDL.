@@ -4090,12 +4090,16 @@ thead .wandl-col {
 
 /* Allergen Grid Spacing & Contrast */
 #allergen-free .allergen-grid {
-    gap: 2rem !important;
+    gap: 2.5rem 4rem !important;
     justify-content: center !important;
 }
 #allergen-free h2, #allergen-free .label {
     color: #ffffff !important;
     text-shadow: 0 2px 10px rgba(0,0,0,0.8) !important;
+}
+#allergen-free .label {
+    font-size: 0.95rem;
+    white-space: nowrap;
 }
 #allergen-free .section-sub {
     color: #ffffff !important;

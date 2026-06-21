@@ -1759,6 +1759,13 @@ section {
     background: url('../assets/images/bg-legal.png') center/cover no-repeat fixed;
 }
 
+@media screen and (min-width: 768px) {
+    #legal .overlay {
+        margin-left: 8vw;
+        margin-right: auto;
+    }
+}
+
 
 /* ==========================================================================
    25. VISION / ROADMAP (#vision)

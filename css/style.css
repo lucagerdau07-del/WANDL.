@@ -4189,6 +4189,9 @@ thead .wandl-col {
     font-weight: bold;
     text-shadow: 0 4px 15px rgba(0,0,0,1);
 }
+.white-shadow-bullets li::before {
+    text-shadow: 0 0 15px rgba(255,255,255,0.8);
+}
 .target-info p {
     font-size: 1rem;
     line-height: 1.6;

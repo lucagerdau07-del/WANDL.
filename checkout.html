@@ -311,9 +311,11 @@
                     const itemEl = document.createElement('div');
                     itemEl.className = 'r-item';
                     itemEl.innerHTML = `
-                        <div class="r-item-name">
-                            <button onclick="removeItem('${item.name}')" style="background:none;border:none;color:#999;cursor:pointer;font-family:monospace;padding:0;margin-right:8px;" title="Entfernen">✕</button>
-                            ${item.quantity}x ${item.name}
+                        <div class="r-item-name" style="display:flex; align-items:center;">
+                            <button onclick="removeItem('${item.name}')" style="background:none;border:none;color:#666;cursor:pointer;font-family:monospace;padding:0 4px;font-size:1.1rem;line-height:1;" title="Reduzieren">-</button>
+                            <span style="margin: 0 4px; display:inline-block; min-width:1ch; text-align:center;">${item.quantity}</span>
+                            <button onclick="addItem('${item.name}', ${item.price})" style="background:none;border:none;color:#666;cursor:pointer;font-family:monospace;padding:0 4px;font-size:1.1rem;line-height:1;margin-right:8px;" title="Hinzufügen">+</button>
+                            x ${item.name}
                         </div>
                         <div class="r-item-price">${itemTotal.toFixed(2).replace('.', ',')} €</div>
                     `;
@@ -329,6 +331,12 @@
             // Expose the remove function globally so the inline onclick works
             window.removeItem = function(name) {
                 removeFromCart(name);
+                renderCartItems();
+            };
+
+            // Expose add function globally
+            window.addItem = function(name, price) {
+                addToCart(name, 1, price);
                 renderCartItems();
             };
 

@@ -31,14 +31,22 @@ function addToCart(productName, quantity, price) {
     showToast(`${quantity}x ${productName} zum Warenkorb hinzugefügt!`);
 }
 
-// Artikel aus dem Warenkorb entfernen
+// Artikel aus dem Warenkorb entfernen (Menge um 1 reduzieren)
 function removeFromCart(productName) {
     let cart = getCart();
-    cart = cart.filter(item => item.name !== productName);
-    localStorage.setItem(CART_KEY, JSON.stringify(cart));
-    updateCartUI();
+    const itemIndex = cart.findIndex(item => item.name === productName);
     
-    showToast(`${productName} wurde aus dem Warenkorb entfernt.`);
+    if (itemIndex >= 0) {
+        if (cart[itemIndex].quantity > 1) {
+            cart[itemIndex].quantity -= 1;
+        } else {
+            // Ganz entfernen, wenn nur noch 1 übrig war
+            cart.splice(itemIndex, 1);
+            showToast(`${productName} wurde aus dem Warenkorb entfernt.`);
+        }
+        localStorage.setItem(CART_KEY, JSON.stringify(cart));
+        updateCartUI();
+    }
 }
 
 // Warenkorb komplett leeren

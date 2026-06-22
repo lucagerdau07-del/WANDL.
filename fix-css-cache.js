@@ -16,8 +16,8 @@ const files = [
 files.forEach(file => {
     if (fs.existsSync(file)) {
         let content = fs.readFileSync(file, 'utf8');
-        content = content.replace(/href="css\/style\.css(\?v=\d+)?"/g, 'href="css/style.css?v=1.0.2"');
+        content = content.replace(/href="css\/style\.css\?v=1\.0\.2"/g, 'href="css/style.css?v=1.0.3"');
         fs.writeFileSync(file, content, 'utf8');
     }
 });
-console.log('Fixed CSS cache busting.');
+console.log('Fixed CSS cache busting to 1.0.3.');

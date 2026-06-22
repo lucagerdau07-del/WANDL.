@@ -2319,6 +2319,10 @@ section {
     color: var(--color-olive-300);
 }
 
+.footer-grid .qr {
+    text-align: center;
+}
+
 .bottom-bar {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     padding: var(--spacing-md) 0;

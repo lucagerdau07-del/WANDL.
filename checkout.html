@@ -312,9 +312,9 @@
                     itemEl.className = 'r-item';
                     itemEl.innerHTML = `
                         <div class="r-item-name" style="display:flex; align-items:center;">
-                            <button onclick="removeItem('${item.name}')" style="background:none;border:none;color:#666;cursor:pointer;font-family:monospace;padding:0 4px;font-size:1.1rem;line-height:1;" title="Reduzieren">-</button>
-                            <span style="margin: 0 4px; display:inline-block; min-width:1ch; text-align:center;">${item.quantity}</span>
-                            <button onclick="addItem('${item.name}', ${item.price})" style="background:none;border:none;color:#666;cursor:pointer;font-family:monospace;padding:0 4px;font-size:1.1rem;line-height:1;margin-right:8px;" title="Hinzufügen">+</button>
+                            <button onclick="removeItem('${item.name}')" style="background:none;border:none;color:var(--color-olive-600);font-weight:bold;cursor:pointer;font-family:monospace;padding:0 4px;font-size:1.2rem;line-height:1;" title="Reduzieren">-</button>
+                            <span style="margin: 0 4px; display:inline-block; min-width:1ch; text-align:center; font-weight:bold;">${item.quantity}</span>
+                            <button onclick="addItem('${item.name}', ${item.price})" style="background:none;border:none;color:var(--color-olive-600);font-weight:bold;cursor:pointer;font-family:monospace;padding:0 4px;font-size:1.2rem;line-height:1;margin-right:8px;" title="Hinzufügen">+</button>
                             x ${item.name}
                         </div>
                         <div class="r-item-price">${itemTotal.toFixed(2).replace('.', ',')} €</div>

@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const context = canvas.getContext("2d");
 
     const frameCount = 239;
-    const currentFrame = index => `assets/frames/frame_${(index + 1).toString().padStart(3, '0')}.png`;
+    const currentFrame = index => `assets/frames/frame_${(index + 1).toString().padStart(3, '0')}.webp`;
     
     const images = [];
     const animation = { frame: 0 };

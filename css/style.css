@@ -2320,10 +2320,8 @@ section {
 }
 
 .footer-grid .qr {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
+    margin-left: auto;
+    width: max-content;
 }
 
 .bottom-bar {

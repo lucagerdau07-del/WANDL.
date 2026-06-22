@@ -96,33 +96,46 @@
         .checkout-receipt-side {
             position: relative;
             width: 100%;
-            max-width: 450px;
-            margin: 0 auto;
+            max-width: 400px;
+            margin: 2rem auto;
+            background: #fdfdfd;
+            padding: 3rem 2rem;
             filter: drop-shadow(0 25px 40px rgba(0,0,0,0.15));
             transform: rotate(2deg);
             transition: transform 0.4s ease;
-        }
-
-        .checkout-receipt-side:hover {
-            transform: rotate(0deg) translateY(-10px);
-        }
-
-        .receipt-bg {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .receipt-content {
-            position: absolute;
-            top: 12%; /* Leave space for jagged edge */
-            bottom: 12%;
-            left: 12%;
-            right: 12%;
             font-family: 'Space Mono', monospace; /* Monospace for receipt look */
             color: #333;
             display: flex;
             flex-direction: column;
+        }
+
+        .checkout-receipt-side::before,
+        .checkout-receipt-side::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 12px;
+            background-size: 24px 24px;
+            background-repeat: repeat-x;
+        }
+
+        .checkout-receipt-side::before {
+            top: -12px;
+            background-image: 
+                linear-gradient(-45deg, transparent 12px, #fdfdfd 12px), 
+                linear-gradient(45deg, transparent 12px, #fdfdfd 12px);
+        }
+
+        .checkout-receipt-side::after {
+            bottom: -12px;
+            background-image: 
+                linear-gradient(135deg, transparent 12px, #fdfdfd 12px), 
+                linear-gradient(-135deg, transparent 12px, #fdfdfd 12px);
+        }
+
+        .checkout-receipt-side:hover {
+            transform: rotate(0deg) translateY(-10px);
         }
 
         .receipt-header {
@@ -147,7 +160,6 @@
 
         .receipt-items {
             flex-grow: 1;
-            overflow-y: auto;
         }
 
         .r-item {
@@ -238,30 +250,27 @@
 
             <!-- Rechte Seite: Kassenbon -->
             <div class="checkout-receipt-side">
-                <img src="assets/images/receipt.png" class="receipt-bg" alt="Kassenbon">
-                <div class="receipt-content">
-                    <div class="receipt-header">
-                        <h2>WANDL.</h2>
-                        <p>Zwei in Eins Riegel<br>Hamburg, Deutschland<br><span id="receipt-date"></span></p>
-                    </div>
-                    
-                    <div class="receipt-items" id="receipt-items-list">
-                        <!-- Items rendered by JS -->
-                    </div>
+                <div class="receipt-header">
+                    <h2>WANDL.</h2>
+                    <p>Zwei in Eins Riegel<br>Hamburg, Deutschland<br><span id="receipt-date"></span></p>
+                </div>
+                
+                <div class="receipt-items" id="receipt-items-list">
+                    <!-- Items rendered by JS -->
+                </div>
 
-                    <div class="receipt-footer">
-                        <div class="r-item" style="color: #666; margin-bottom: 0.5rem;">
-                            <span>MwSt. (7%)</span>
-                            <span id="receipt-tax">0,00 €</span>
-                        </div>
-                        <div class="r-total">
-                            <span>GESAMT</span>
-                            <span id="receipt-total">0,00 €</span>
-                        </div>
-                        <p style="text-align: center; margin-top: 2rem; font-size: 0.8rem; color: #666;">
-                            Vielen Dank für deinen Einkauf!<br>www.wandl-snacks.de
-                        </p>
+                <div class="receipt-footer">
+                    <div class="r-item" style="color: #666; margin-bottom: 0.5rem;">
+                        <span>MwSt. (7%)</span>
+                        <span id="receipt-tax">0,00 €</span>
                     </div>
+                    <div class="r-total">
+                        <span>GESAMT</span>
+                        <span id="receipt-total">0,00 €</span>
+                    </div>
+                    <p style="text-align: center; margin-top: 2rem; font-size: 0.8rem; color: #666;">
+                        Vielen Dank für deinen Einkauf!<br>www.wandl-snacks.de
+                    </p>
                 </div>
             </div>
 

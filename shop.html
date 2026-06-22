@@ -275,7 +275,7 @@
                 btn.addEventListener('click', (e) => {
                     const productCard = e.target.closest('.product-card');
                     const productName = productCard.querySelector('h3 a').textContent;
-                    const priceStr = productCard.querySelector('.price').textContent;
+                    const priceStr = productCard.querySelector('.product-price-tag').textContent;
                     // Extract number from "€ 2,90"
                     const price = parseFloat(priceStr.replace('€', '').replace(',', '.').trim());
                     const qty = productCard.querySelector('.qty-input').value;

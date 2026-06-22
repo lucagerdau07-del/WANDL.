@@ -366,9 +366,10 @@
                     receiptList.appendChild(itemEl);
                 });
 
-                // Versandkosten (frei ab 50 Euro)
+                // Versandkosten (frei ab 50 Euro oder wenn Starter Box im Warenkorb ist)
+                const hasStarterBox = cart.some(item => item.name === 'Starter Box');
                 let shipping = 0;
-                if (total > 0 && total < 50) {
+                if (total > 0 && total < 50 && !hasStarterBox) {
                     shipping = 4.90;
                 }
                 const finalTotal = total + shipping;

@@ -4812,3 +4812,8 @@ thead .wandl-col {
         transform: translateY(5400px);
     }
 }
+
+/* Fix emoji vertical alignment in allergen grid */
+#allergen-free .allergen-icon .icon {
+    transform: translateY(12px);
+}

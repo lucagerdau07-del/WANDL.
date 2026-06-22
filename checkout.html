@@ -7,32 +7,203 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- MQTT.js for Real-Time Signaling -->
     <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
 
     <style>
-        main { padding-top: 120px; min-height: 80vh; background: var(--color-earth-50); }
-        .checkout-container { max-width: 800px; margin: 0 auto; padding: 2rem; background: white; border-radius: 12px; box-shadow: var(--shadow-sm); }
-        .cart-items { border-bottom: 2px solid var(--color-earth-200); margin-bottom: 2rem; padding-bottom: 1rem; }
-        .cart-item { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid var(--color-earth-100); }
-        .cart-item:last-child { border-bottom: none; }
-        .item-info h3 { font-size: 1.2rem; margin: 0; color: var(--color-earth-900); }
-        .item-info p { color: var(--color-earth-600); margin: 0.2rem 0 0 0; }
-        .item-price { font-weight: 600; font-size: 1.2rem; color: var(--color-olive-700); }
-        .cart-total { display: flex; justify-content: space-between; align-items: center; font-size: 1.5rem; font-weight: bold; margin-bottom: 2rem; }
-        
-        .checkout-form { display: flex; flex-direction: column; gap: 1rem; }
-        .checkout-form input { padding: 1rem; border: 1px solid var(--color-earth-300); border-radius: var(--radius-sm); font-family: var(--font-body); font-size: 1rem; }
-        .btn-order { background: var(--color-olive-500); color: white; border: none; padding: 1.2rem; font-size: 1.2rem; font-weight: bold; border-radius: var(--radius-sm); cursor: pointer; transition: background 0.3s ease; width: 100%; margin-top: 1rem; }
-        .btn-order:hover { background: var(--color-olive-700); }
+        body {
+            background-color: var(--color-earth-50);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        main { 
+            padding-top: 120px; 
+            min-height: 100vh;
+            position: relative;
+            z-index: 2;
+        }
+
+        .checkout-layout {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: flex-start;
+        }
+
+        /* Formular Seite */
+        .checkout-form-side {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        .checkout-form-side h1 {
+            font-family: var(--font-display);
+            color: var(--color-earth-900);
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+
+        .checkout-form { display: flex; flex-direction: column; gap: 1.5rem; }
+        .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+        .form-group label { font-weight: 600; color: var(--color-earth-700); font-size: 0.9rem; }
+        .checkout-form input { 
+            padding: 1.2rem; 
+            border: 1px solid var(--color-earth-300); 
+            border-radius: var(--radius-sm); 
+            font-family: var(--font-body); 
+            font-size: 1rem;
+            background: rgba(255,255,255,0.9);
+            transition: all 0.3s ease;
+        }
+        .checkout-form input:focus {
+            outline: none;
+            border-color: var(--color-olive-500);
+            box-shadow: 0 0 0 4px rgba(133, 153, 75, 0.1);
+        }
+
+        .btn-order { 
+            background: var(--color-olive-500); 
+            color: white; 
+            border: none; 
+            padding: 1.2rem; 
+            font-size: 1.2rem; 
+            font-weight: bold; 
+            border-radius: var(--radius-sm); 
+            cursor: pointer; 
+            transition: background 0.3s ease, transform 0.2s ease; 
+            width: 100%; 
+            margin-top: 1rem;
+            box-shadow: 0 10px 20px rgba(133, 153, 75, 0.3);
+        }
+        .btn-order:hover { 
+            background: var(--color-olive-700); 
+            transform: translateY(-2px);
+        }
+
+        /* Kassenbon Seite */
+        .checkout-receipt-side {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto;
+            filter: drop-shadow(0 25px 40px rgba(0,0,0,0.15));
+            transform: rotate(2deg);
+            transition: transform 0.4s ease;
+        }
+
+        .checkout-receipt-side:hover {
+            transform: rotate(0deg) translateY(-10px);
+        }
+
+        .receipt-bg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .receipt-content {
+            position: absolute;
+            top: 12%; /* Leave space for jagged edge */
+            bottom: 12%;
+            left: 12%;
+            right: 12%;
+            font-family: 'Space Mono', monospace; /* Monospace for receipt look */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .receipt-header {
+            text-align: center;
+            border-bottom: 2px dashed #999;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .receipt-header h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        .receipt-header p {
+            font-size: 0.85rem;
+            margin: 0.5rem 0 0 0;
+            color: #666;
+        }
+
+        .receipt-items {
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .r-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+            line-height: 1.2;
+        }
+
+        .r-item-name { flex: 1; padding-right: 1rem; }
+
+        .receipt-footer {
+            border-top: 2px dashed #999;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .r-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
         .empty-cart-msg { text-align: center; padding: 3rem; color: var(--color-earth-600); }
+
+        @media (max-width: 900px) {
+            .checkout-layout {
+                grid-template-columns: 1fr;
+            }
+            .checkout-receipt-side {
+                order: -1;
+                transform: rotate(0);
+                margin-bottom: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <nav id="nav-main">
+
+    <!-- Dynamischer Hintergrund (wie auf Startseite) -->
+    <div class="bg-symbols" aria-hidden="true" style="z-index: 0; opacity: 0.6;">
+        <span class="plus" style="--x: 10%; --duration: 18s; --delay: 0s; --size: 1.2">+</span>
+        <span class="plus" style="--x: 25%; --duration: 22s; --delay: 3s; --size: 0.8">+</span>
+        <span class="plus" style="--x: 40%; --duration: 16s; --delay: 7s; --size: 1.5">+</span>
+        <span class="plus" style="--x: 55%; --duration: 20s; --delay: 2s; --size: 1.0">+</span>
+        <span class="plus" style="--x: 70%; --duration: 24s; --delay: 5s; --size: 1.3">+</span>
+        <span class="plus" style="--x: 85%; --duration: 19s; --delay: 8s; --size: 0.9">+</span>
+        <span class="plus" style="--x: 15%; --duration: 21s; --delay: 10s; --size: 1.1">+</span>
+        <span class="plus" style="--x: 50%; --duration: 17s; --delay: 4s; --size: 0.7">+</span>
+        <span class="plus" style="--x: 65%; --duration: 23s; --delay: 6s; --size: 1.4">+</span>
+        <span class="plus" style="--x: 90%; --duration: 15s; --delay: 1s; --size: 1.0">+</span>
+    </div>
+
+    <nav id="nav-main" style="z-index: 10;">
         <div class="nav-container">
             <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="WANDL. Logo" style="height: 30px;"></a>
             <ul class="nav-links">
@@ -43,29 +214,57 @@
     </nav>
 
     <main>
-        <div class="container">
-            <div class="checkout-container">
-                <h1 style="text-align: center; margin-bottom: 2rem; font-family: var(--font-display);">Kasse</h1>
-                
-                <div id="cart-content">
-                    <div class="cart-items" id="cart-items-list">
-                        <!-- Items rendered by JS -->
+        <div class="checkout-layout" id="checkout-container-main">
+            
+            <!-- Linke Seite: Formular -->
+            <div class="checkout-form-side">
+                <h1>Lieferdetails</h1>
+                <form id="checkoutForm" class="checkout-form">
+                    <div class="form-group">
+                        <label>Vorname & Nachname</label>
+                        <input type="text" placeholder="Max Mustermann" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Straße & Hausnummer</label>
+                        <input type="text" placeholder="Beispielstraße 123" required>
+                    </div>
+                    <div class="form-group">
+                        <label>PLZ & Ort</label>
+                        <input type="text" placeholder="20095 Hamburg" required>
+                    </div>
+                    <button type="submit" class="btn-order" id="btn-submit">Jetzt kostenpflichtig bestellen</button>
+                </form>
+            </div>
+
+            <!-- Rechte Seite: Kassenbon -->
+            <div class="checkout-receipt-side">
+                <img src="assets/images/receipt.png" class="receipt-bg" alt="Kassenbon">
+                <div class="receipt-content">
+                    <div class="receipt-header">
+                        <h2>WANDL.</h2>
+                        <p>Zwei in Eins Riegel<br>Hamburg, Deutschland<br><span id="receipt-date"></span></p>
                     </div>
                     
-                    <div class="cart-total" id="cart-total-display">
-                        <span>Gesamtsumme:</span>
-                        <span id="total-price">0,00 €</span>
+                    <div class="receipt-items" id="receipt-items-list">
+                        <!-- Items rendered by JS -->
                     </div>
 
-                    <form id="checkoutForm" class="checkout-form">
-                        <h3>Lieferadresse</h3>
-                        <input type="text" placeholder="Vorname & Nachname" required>
-                        <input type="text" placeholder="Straße & Hausnummer" required>
-                        <input type="text" placeholder="PLZ & Ort" required>
-                        <button type="submit" class="btn-order" id="btn-submit">Kostenpflichtig bestellen</button>
-                    </form>
+                    <div class="receipt-footer">
+                        <div class="r-item" style="color: #666; margin-bottom: 0.5rem;">
+                            <span>MwSt. (7%)</span>
+                            <span id="receipt-tax">0,00 €</span>
+                        </div>
+                        <div class="r-total">
+                            <span>GESAMT</span>
+                            <span id="receipt-total">0,00 €</span>
+                        </div>
+                        <p style="text-align: center; margin-top: 2rem; font-size: 0.8rem; color: #666;">
+                            Vielen Dank für deinen Einkauf!<br>www.wandl-snacks.de
+                        </p>
+                    </div>
                 </div>
             </div>
+
         </div>
     </main>
 
@@ -73,44 +272,47 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const cart = getCart();
-            const cartItemsList = document.getElementById('cart-items-list');
-            const cartContent = document.getElementById('cart-content');
-            const totalPriceEl = document.getElementById('total-price');
+            const mainContainer = document.getElementById('checkout-container-main');
+            
+            // Datum für Bon
+            const now = new Date();
+            document.getElementById('receipt-date').textContent = now.toLocaleDateString('de-DE') + ' ' + now.toLocaleTimeString('de-DE').substring(0, 5);
 
             if (cart.length === 0) {
-                cartContent.innerHTML = `
-                    <div class="empty-cart-msg">
-                        <h2>Dein Warenkorb ist leer.</h2>
-                        <br>
-                        <a href="shop.html" class="btn btn-primary">Zurück zum Shop</a>
+                mainContainer.innerHTML = `
+                    <div class="checkout-form-side" style="grid-column: 1 / -1; text-align: center;">
+                        <h1>Dein Warenkorb ist leer</h1>
+                        <p style="margin-bottom: 2rem;">Du hast noch keine WANDL. Riegel ausgewählt.</p>
+                        <a href="shop.html" class="btn-order" style="display: inline-block; width: auto; padding: 1rem 3rem; text-decoration: none;">Hier geht's zum Shop</a>
                     </div>
                 `;
                 return;
             }
 
+            const receiptList = document.getElementById('receipt-items-list');
             let total = 0;
+
             cart.forEach(item => {
                 const itemTotal = item.quantity * item.price;
                 total += itemTotal;
                 
                 const itemEl = document.createElement('div');
-                itemEl.className = 'cart-item';
+                itemEl.className = 'r-item';
                 itemEl.innerHTML = `
-                    <div class="item-info">
-                        <h3>${item.name}</h3>
-                        <p>Menge: ${item.quantity} | Einzelpreis: ${item.price.toFixed(2).replace('.', ',')} €</p>
-                    </div>
-                    <div class="item-price">${itemTotal.toFixed(2).replace('.', ',')} €</div>
+                    <div class="r-item-name">${item.quantity}x ${item.name}</div>
+                    <div class="r-item-price">${itemTotal.toFixed(2).replace('.', ',')} €</div>
                 `;
-                cartItemsList.appendChild(itemEl);
+                receiptList.appendChild(itemEl);
             });
 
-            totalPriceEl.textContent = `${total.toFixed(2).replace('.', ',')} €`;
+            // Steuer berechnen (simuliert 7%)
+            const tax = total * 0.07;
+            document.getElementById('receipt-tax').textContent = `${tax.toFixed(2).replace('.', ',')} €`;
+            document.getElementById('receipt-total').textContent = `${total.toFixed(2).replace('.', ',')} €`;
 
             // --- MQTT PITCH SIGNAL LOGIC ---
-            // Verbinden mit öffentlichem MQTT Broker (WebSockets)
             const client = mqtt.connect('wss://test.mosquitto.org:8081/mqtt');
-            const topic = 'wandl_pitch_signal_1337'; // Geheimes Topic
+            const topic = 'wandl_pitch_signal_1337';
             
             client.on('connect', () => {
                 console.log('Mit Live-Signal-Server verbunden.');
@@ -121,7 +323,7 @@
                 e.preventDefault();
                 
                 const btn = document.getElementById('btn-submit');
-                btn.textContent = 'Verarbeite...';
+                btn.innerHTML = 'Verarbeite Bestellung <span style="display:inline-block; animation: spin 1s linear infinite;">↻</span>';
                 btn.disabled = true;
 
                 // Sende Signal an das Handy!
@@ -131,7 +333,7 @@
                 setTimeout(() => {
                     clearCart();
                     window.location.href = 'success.html';
-                }, 1000);
+                }, 1500);
             });
         });
     </script>

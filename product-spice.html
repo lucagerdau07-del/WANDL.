@@ -227,5 +227,21 @@
 
     <script src="js/navigation.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const addToCartBtn = document.querySelector('.btn-add-to-cart');
+            if (addToCartBtn) {
+                addToCartBtn.addEventListener('click', () => {
+                    const productName = document.querySelector('h1').textContent.replace('WANDL. ', '');
+                    const priceStr = document.querySelector('.product-price').textContent;
+                    const price = parseFloat(priceStr.replace('€', '').replace(',', '.').trim());
+                    const qty = document.querySelector('.qty-input').value;
+                    
+                    addToCart(productName, qty, price);
+                });
+            }
+        });
+    </script>
 </body>
 </html>

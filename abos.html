@@ -112,7 +112,7 @@
                             <li>Perfekt zum Testen</li>
                             <li>Alle 3 Sorten enthalten</li>
                         </ul>
-                        <button type="button" class="btn-secondary" style="width: 100%; margin-top: 1.5rem;">In den Warenkorb</button>
+                        <button type="button" id="btn-add-starter" class="btn-secondary" style="width: 100%; margin-top: 1.5rem;">In den Warenkorb</button>
                     </div>
 
                     <!-- Monthly (Bestseller) -->
@@ -185,5 +185,18 @@
 
     <script src="js/navigation.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnStarter = document.getElementById('btn-add-starter');
+            if (btnStarter) {
+                btnStarter.addEventListener('click', () => {
+                    // The Starter box contains 6 bars at 4.90 each, total 29.40.
+                    // We can add it as a single product named "Starter Box" with price 29.40
+                    addToCart('Starter Box', 1, 29.40);
+                });
+            }
+        });
+    </script>
 </body>
 </html>

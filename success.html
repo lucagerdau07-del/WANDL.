@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WANDL. | Bestellung Erfolgreich</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body { background: var(--color-earth-50); }
+        main { padding-top: 150px; min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+        .success-box { max-width: 600px; padding: 4rem; background: white; border-radius: 12px; box-shadow: var(--shadow-sm); }
+        .checkmark { font-size: 5rem; color: var(--color-olive-500); margin-bottom: 1rem; }
+        h1 { font-family: var(--font-display); color: var(--color-earth-900); margin-bottom: 1rem; }
+        p { color: var(--color-earth-700); font-size: 1.2rem; margin-bottom: 2rem; }
+    </style>
+</head>
+<body>
+    <nav id="nav-main">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="WANDL. Logo" style="height: 30px;"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Zurück zur Startseite</a></li>
+                <li><a href="shop.html">Zum Shop</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="success-box">
+            <div class="checkmark">✓</div>
+            <h1>Vielen Dank für deine Bestellung!</h1>
+            <p>Wir haben deine Bestellung erhalten und sie wird in Kürze bearbeitet.</p>
+            <a href="index.html" class="btn btn-primary">Zurück zur Startseite</a>
+        </div>
+    </main>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>

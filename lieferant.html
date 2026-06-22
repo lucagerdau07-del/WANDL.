@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WANDL. | Lieferant Signal</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- MQTT.js -->
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+
+    <style>
+        body, html {
+            margin: 0; padding: 0; width: 100%; height: 100%;
+            background-color: #111; color: #fff;
+            font-family: 'Inter', sans-serif;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center; overflow: hidden;
+            transition: background-color 0.1s ease;
+        }
+
+        #status-text { font-size: 1.5rem; color: #888; font-weight: 600; margin-bottom: 2rem; }
+        
+        #go-signal {
+            display: none;
+            font-size: 4rem;
+            font-weight: 800;
+            color: #fff;
+            text-transform: uppercase;
+            animation: pulse 1s infinite alternate;
+        }
+
+        .spinner {
+            width: 50px; height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.1);
+            border-top-color: #fff; border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+        @keyframes pulse { 0% { transform: scale(1); } 100% { transform: scale(1.1); } }
+    </style>
+</head>
+<body>
+    
+    <div id="wait-container">
+        <div class="spinner"></div>
+        <div id="status-text" style="margin-top: 2rem;">Verbinde mit Server...</div>
+    </div>
+
+    <div id="go-signal">
+        GO!<br>JETZT REINKOMMEN!
+    </div>
+
+    <!-- Alarm-Sound (optional, Browser blockieren Autoplay oft, aber da der Nutzer interagieren kann, aktivieren wir es beim Klick aufs Display) -->
+    <audio id="alarm-sound" src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3" preload="auto"></audio>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const statusText = document.getElementById('status-text');
+            const waitContainer = document.getElementById('wait-container');
+            const goSignal = document.getElementById('go-signal');
+            const alarmSound = document.getElementById('alarm-sound');
+
+            // Wake-Lock / Audio Unlock (Tap to enable)
+            document.body.addEventListener('click', () => {
+                alarmSound.play().then(() => { alarmSound.pause(); alarmSound.currentTime = 0; }).catch(() => {});
+                statusText.textContent = "Warte auf Signal... (Audio aktiviert)";
+            }, { once: true });
+
+            // MQTT Connection
+            const client = mqtt.connect('wss://test.mosquitto.org:8081/mqtt');
+            const topic = 'wandl_pitch_signal_1337'; // Gleiches Topic wie in checkout.html
+            
+            client.on('connect', () => {
+                console.log('Verbunden.');
+                statusText.textContent = "Warte auf Signal... (Tippe auf Screen für Audio)";
+                client.subscribe(topic);
+            });
+
+            client.on('message', (t, message) => {
+                if (t === topic && message.toString() === 'ORDER_PLACED') {
+                    // SIGNAL RECEIVED!
+                    waitContainer.style.display = 'none';
+                    goSignal.style.display = 'block';
+                    document.body.style.backgroundColor = '#4caf50'; // Bright green
+                    
+                    // Play sound
+                    alarmSound.play().catch(e => console.log('Audio autoplay blocked', e));
+
+                    // Vibrate if supported
+                    if (navigator.vibrate) {
+                        navigator.vibrate([500, 200, 500, 200, 1000]);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

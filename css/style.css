@@ -460,7 +460,7 @@ section {
 }
 
 /* Mobile menu overlay */
-.nav-links.mobile-open {
+.nav-links.active {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -478,7 +478,7 @@ section {
     animation: fadeInUp 0.4s var(--ease-out);
 }
 
-.nav-links.mobile-open a {
+.nav-links.active a {
     font-size: 1.75rem;
     font-family: var(--font-display);
     font-weight: 600;

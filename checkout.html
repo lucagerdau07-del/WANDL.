@@ -261,6 +261,10 @@
 
                 <div class="receipt-footer">
                     <div class="r-item" style="color: #666; margin-bottom: 0.5rem;">
+                        <span>Versandkosten</span>
+                        <span id="receipt-shipping">0,00 €</span>
+                    </div>
+                    <div class="r-item" style="color: #666; margin-bottom: 0.5rem;">
                         <span>MwSt. (7%)</span>
                         <span id="receipt-tax">0,00 €</span>
                     </div>
@@ -322,10 +326,19 @@
                     receiptList.appendChild(itemEl);
                 });
 
-                // Steuer berechnen (simuliert 7%)
+                // Versandkosten (frei ab 50 Euro)
+                let shipping = 0;
+                if (total > 0 && total < 50) {
+                    shipping = 4.90;
+                }
+                const finalTotal = total + shipping;
+
+                // Steuer berechnen (simuliert 7% auf Warenwert)
                 const tax = total * 0.07;
+                
+                document.getElementById('receipt-shipping').textContent = shipping === 0 ? 'Kostenlos' : `${shipping.toFixed(2).replace('.', ',')} €`;
                 document.getElementById('receipt-tax').textContent = `${tax.toFixed(2).replace('.', ',')} €`;
-                document.getElementById('receipt-total').textContent = `${total.toFixed(2).replace('.', ',')} €`;
+                document.getElementById('receipt-total').textContent = `${finalTotal.toFixed(2).replace('.', ',')} €`;
             }
 
             // Expose the remove function globally so the inline onclick works

@@ -83,18 +83,23 @@
 
             client.on('message', (t, message) => {
                 if (t === topic && message.toString() === 'ORDER_PLACED') {
-                    // SIGNAL RECEIVED!
-                    waitContainer.style.display = 'none';
-                    goSignal.style.display = 'block';
-                    document.body.style.backgroundColor = '#4caf50'; // Bright green
+                    // Update text immediately to show it's counting down (optional, but good for feedback)
+                    statusText.textContent = "Signal erhalten. Warte 3 Sekunden...";
                     
-                    // Play sound
-                    alarmSound.play().catch(e => console.log('Audio autoplay blocked', e));
+                    setTimeout(() => {
+                        // SIGNAL RECEIVED!
+                        waitContainer.style.display = 'none';
+                        goSignal.style.display = 'block';
+                        document.body.style.backgroundColor = '#4caf50'; // Bright green
+                        
+                        // Play sound
+                        alarmSound.play().catch(e => console.log('Audio autoplay blocked', e));
 
-                    // Vibrate if supported
-                    if (navigator.vibrate) {
-                        navigator.vibrate([500, 200, 500, 200, 1000]);
-                    }
+                        // Vibrate if supported
+                        if (navigator.vibrate) {
+                            navigator.vibrate([500, 200, 500, 200, 1000]);
+                        }
+                    }, 3000);
                 }
             });
         });

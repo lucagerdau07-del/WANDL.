@@ -31,6 +31,16 @@ function addToCart(productName, quantity, price) {
     showToast(`${quantity}x ${productName} zum Warenkorb hinzugefügt!`);
 }
 
+// Artikel aus dem Warenkorb entfernen
+function removeFromCart(productName) {
+    let cart = getCart();
+    cart = cart.filter(item => item.name !== productName);
+    localStorage.setItem(CART_KEY, JSON.stringify(cart));
+    updateCartUI();
+    
+    showToast(`${productName} wurde aus dem Warenkorb entfernt.`);
+}
+
 // Warenkorb komplett leeren
 function clearCart() {
     localStorage.removeItem(CART_KEY);

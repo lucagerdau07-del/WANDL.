@@ -280,44 +280,60 @@
     <script src="js/cart.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const cart = getCart();
             const mainContainer = document.getElementById('checkout-container-main');
             
             // Datum für Bon
             const now = new Date();
             document.getElementById('receipt-date').textContent = now.toLocaleDateString('de-DE') + ' ' + now.toLocaleTimeString('de-DE').substring(0, 5);
 
-            if (cart.length === 0) {
-                mainContainer.innerHTML = `
-                    <div class="checkout-form-side" style="grid-column: 1 / -1; text-align: center;">
-                        <h1>Dein Warenkorb ist leer</h1>
-                        <p style="margin-bottom: 2rem;">Du hast noch keine WANDL. Riegel ausgewählt.</p>
-                        <a href="shop.html" class="btn-order" style="display: inline-block; width: auto; padding: 1rem 3rem; text-decoration: none;">Hier geht's zum Shop</a>
-                    </div>
-                `;
-                return;
+            function renderCartItems() {
+                const cart = getCart();
+                
+                if (cart.length === 0) {
+                    mainContainer.innerHTML = `
+                        <div class="checkout-form-side" style="grid-column: 1 / -1; text-align: center;">
+                            <h1>Dein Warenkorb ist leer</h1>
+                            <p style="margin-bottom: 2rem;">Du hast noch keine WANDL. Riegel ausgewählt.</p>
+                            <a href="shop.html" class="btn-order" style="display: inline-block; width: auto; padding: 1rem 3rem; text-decoration: none;">Hier geht's zum Shop</a>
+                        </div>
+                    `;
+                    return;
+                }
+
+                const receiptList = document.getElementById('receipt-items-list');
+                receiptList.innerHTML = ''; // Clear previous items
+                let total = 0;
+
+                cart.forEach(item => {
+                    const itemTotal = item.quantity * item.price;
+                    total += itemTotal;
+                    
+                    const itemEl = document.createElement('div');
+                    itemEl.className = 'r-item';
+                    itemEl.innerHTML = `
+                        <div class="r-item-name">
+                            <button onclick="removeItem('${item.name}')" style="background:none;border:none;color:#999;cursor:pointer;font-family:monospace;padding:0;margin-right:8px;" title="Entfernen">✕</button>
+                            ${item.quantity}x ${item.name}
+                        </div>
+                        <div class="r-item-price">${itemTotal.toFixed(2).replace('.', ',')} €</div>
+                    `;
+                    receiptList.appendChild(itemEl);
+                });
+
+                // Steuer berechnen (simuliert 7%)
+                const tax = total * 0.07;
+                document.getElementById('receipt-tax').textContent = `${tax.toFixed(2).replace('.', ',')} €`;
+                document.getElementById('receipt-total').textContent = `${total.toFixed(2).replace('.', ',')} €`;
             }
 
-            const receiptList = document.getElementById('receipt-items-list');
-            let total = 0;
+            // Expose the remove function globally so the inline onclick works
+            window.removeItem = function(name) {
+                removeFromCart(name);
+                renderCartItems();
+            };
 
-            cart.forEach(item => {
-                const itemTotal = item.quantity * item.price;
-                total += itemTotal;
-                
-                const itemEl = document.createElement('div');
-                itemEl.className = 'r-item';
-                itemEl.innerHTML = `
-                    <div class="r-item-name">${item.quantity}x ${item.name}</div>
-                    <div class="r-item-price">${itemTotal.toFixed(2).replace('.', ',')} €</div>
-                `;
-                receiptList.appendChild(itemEl);
-            });
-
-            // Steuer berechnen (simuliert 7%)
-            const tax = total * 0.07;
-            document.getElementById('receipt-tax').textContent = `${tax.toFixed(2).replace('.', ',')} €`;
-            document.getElementById('receipt-total').textContent = `${total.toFixed(2).replace('.', ',')} €`;
+            // Initial render
+            renderCartItems();
 
             // --- MQTT PITCH SIGNAL LOGIC ---
             const client = mqtt.connect('wss://test.mosquitto.org:8081/mqtt');
@@ -328,22 +344,24 @@
             });
 
             const checkoutForm = document.getElementById('checkoutForm');
-            checkoutForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                
-                const btn = document.getElementById('btn-submit');
-                btn.innerHTML = 'Verarbeite Bestellung <span style="display:inline-block; animation: spin 1s linear infinite;">↻</span>';
-                btn.disabled = true;
+            if (checkoutForm) {
+                checkoutForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    const btn = document.getElementById('btn-submit');
+                    btn.innerHTML = 'Verarbeite Bestellung <span style="display:inline-block; animation: spin 1s linear infinite;">↻</span>';
+                    btn.disabled = true;
 
-                // Sende Signal an das Handy!
-                client.publish(topic, 'ORDER_PLACED');
+                    // Sende Signal an das Handy!
+                    client.publish(topic, 'ORDER_PLACED');
 
-                // Simuliere Ladezeit, dann Weiterleitung
-                setTimeout(() => {
-                    clearCart();
-                    window.location.href = 'success.html';
-                }, 1500);
-            });
+                    // Simuliere Ladezeit, dann Weiterleitung
+                    setTimeout(() => {
+                        clearCart();
+                        window.location.href = 'success.html';
+                    }, 1500);
+                });
+            }
         });
     </script>
 </body>

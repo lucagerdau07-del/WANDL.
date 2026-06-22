@@ -1208,7 +1208,7 @@ section {
 }
 
 .logo-item img {
-    height: 58px;
+    height: 75px;
     width: auto;
     object-fit: contain;
     transition: transform 0.3s ease, filter 0.3s ease;
@@ -1220,7 +1220,7 @@ section {
 
 /* Add dark brown drop shadow to specific logos for better visibility */
 .logo-item img[alt="Kitchen4Rent"] {
-    height: 88px; /* 30% larger than previous 68px */
+    height: 114px; /* another 30% larger */
 }
 
 .logo-item img[alt="Kitchen4Rent"],

@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollTrigger: {
             trigger: ".sv-section",
             start: "top top",
-            end: "bottom bottom",
+            end: "85% bottom",
             scrub: 0.5
         },
         onUpdate: render
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollTrigger: {
             trigger: ".sv-section",
             start: "top top",
-            end: "bottom bottom",
+            end: "85% bottom",
             scrub: 1
         }
     });
